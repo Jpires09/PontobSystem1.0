@@ -1,0 +1,11 @@
+<h1> Funcionários: </h1>
+
+<%= form_with model: @employee do |f| %>
+  <%= f.label :name, "Nome" %>
+  <%= f.text_field :name %>
+  <%= f.label :position, "Cargo" %>
+  <%= f.text_field :position %>
+  <%= f.label :admition, "Admissão" %>
+  <%= f.date_field :admition %>
+  <%= f.submit "Cadastrar" %>
+<% end %>

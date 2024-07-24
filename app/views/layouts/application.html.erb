@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pontob</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>  </head>
+
+  <body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1><%= link_to 'PONTO B', root_path %> </h1>
+
+        <h3> Parkour e Acrobacias </h3>
+      </div>
+      <div class="menu">
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Produtos', products_path %>
+        <%= link_to 'Funcionários', employees_path %>
+      </div>
+    </nav>
+  </header>
+
+  <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<h1> Funcionários: </h1>
+
+<%# comentatrio %>
+<ul>
+  <% @employees.each do |employee| %>
+    <li>
+      <a href="/employees/<%= employee.id %>"> <%= employee.name %> </a>
+      <%= link_to 'Editar', edit_employee_path(employee.id) %>
+      <%= link_to 'Excluir', employee_path(employee.id), method: :delete, 
+      data: { confirm: 'Deseja excluir este item?' } %>
+    </li>
+  <% end %>
+</ul>

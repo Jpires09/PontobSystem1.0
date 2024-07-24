@@ -1,0 +1,35 @@
+// app/assets/stylesheets/layouts/_header.scss
+
+header {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto; /* Moverá o menu para a direita */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
