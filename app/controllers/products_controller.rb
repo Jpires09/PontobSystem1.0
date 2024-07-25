@@ -1,13 +1,14 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def index
     @products = Product.all
   end
 
   def show
-    @product = Product.find(params[:id])
   end
+
   def edit
-    @product = Product.find(params[:id])
   end
 
   def new
@@ -15,19 +16,36 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(name: params[:product][:name], 
-    description: params[:product][:description], 
-    price_cents: params[:product][:price_cents])
-
+    @product = Product.new(product_params)
     if @product.save
-      return redirect_to products_path
+      redirect_to products_path, notice: 'Product was successfully created.'
+    else
+      render :new
     end
-    render :new
   end
 
-  def destroy 
-    product = Product.find(params[:id])
-    product.destroy
-    redirect_to root_path
+  def update
+    if @product.update(product_params)
+      redirect_to products_path, notice: 'Product was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    puts "Product destroyed: #{@product.id}"
+    redirect_to products_path, notice: 'Product was successfully destroyed.'
+  end  
+
+  private
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
+  def product_params
+    params.require(:product).permit(:name, :description, :price_cents)
   end
 end
