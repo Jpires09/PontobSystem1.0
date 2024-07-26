@@ -1,0 +1,11 @@
+<h1>Aulas</h1>
+
+<ul> 
+  <% @aulas.each do |aula| %>
+    <li> 
+      <a href="<%= aula_path(aula) %>"><%= aula.data %></a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Aula', new_aula_path %>
