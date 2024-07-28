@@ -9,28 +9,43 @@ class AulasController < ApplicationController
 
   def new
     @aula = Aula.new
+    @aula.build_aquecimento
+    @aula.build_fisico
   end
 
   def create
     @aula = Aula.new(aula_params)
-    @aula.aquecimento ||= {"articular" => "", "cardio" => "", "tecnico" => ""}
-    @aula.data = Date.strptime(params[:aula][:data], '%d/%m/%Y') if params[:aula][:data].present?
     if @aula.save
-      redirect_to aulas_path, notice: 'Aula was successfully created.'
+      redirect_to @aula, notice: 'Aula was successfully created.'
     else
       render :new
     end
   end
-  
-  private
 
-  def aula_params
-    params.require(:aula).permit(:data, :conteudo, :objetivo, :tecnico, aquecimento: [:articular, :cardio, :tecnico], fisico: [:grupo, :exercicio])
+  def edit
+    @aula = Aula.find(params[:id])
   end
-  
+
+  def update
+    @aula = Aula.find(params[:id])
+    if @aula.update(aula_params)
+      redirect_to @aula, notice: 'Aula was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @aula = Aula.find(params[:id])
     @aula.destroy
-    redirect_to aulas_path, notice: 'Aula was successfully destroyed.'  
-  end  
+    redirect_to aulas_path, notice: 'Aula was successfully destroyed.'
+  end
+
+  private
+
+  def aula_params
+    params.require(:aula).permit(:data, :conteudo, :objetivo, :tecnico, 
+    aquecimento_attributes: [:id, :articular, :cardio, :tecnico, :_destroy], 
+    fisico_attributes: [:id, :grupo, :fase, :exercicio, :_destroy])
+  end
 end

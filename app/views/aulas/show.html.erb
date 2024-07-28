@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detalhes da Aula:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Conteúdo</th>
+      <th>Objetivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @aula.data.strftime('%d/%m/%Y') %></td>
+      <td><%= @aula.conteudo %></td>
+      <td><%= @aula.objetivo %></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>Aquecimento</th>
+      <th>Técnico</th>
+      <th>Físico</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong>Articular:</strong> <%= @aula.aquecimento["articular"] %>
+        <br>
+        <strong>Cardio:</strong> <%= @aula.aquecimento["cardio"] %>
+        <br>
+        <strong>Técnico:</strong> <%= @aula.aquecimento["tecnico"] %>
+      </td>
+  
+      <td> <%= simple_format(@aula.tecnico) %> </td>
+  
+      <td>
+        <strong>Grupo:</strong> <%= @aula.fisico["grupo"] %>
+        <br>
+        <strong>Fase:</strong> <%= @aula.fisico["fase"] %>
+        <br>
+        <strong>Exercício:</strong> <%= @aula.fisico["exercicio"] %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_aula_path(@aula) %> |
+<%= link_to 'Back', aulas_path %> |
+<%= link_to 'Destroy', @aula, method: :delete, data: { confirm: 'Are you sure?' } %>

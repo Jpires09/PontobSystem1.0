@@ -1,0 +1,70 @@
+<%= form_with model: @aula, local: true do |form| %>
+  <% if @aula.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aula.errors.count, "error") %> prohibited this aula from being saved:</h2>
+      <ul>
+        <% @aula.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.text_field :data, value: @aula.data.present? ? @aula.data.strftime('%d/%m/%Y') : nil %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conteudo %>
+    <%= form.text_field :conteudo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :objetivo %>
+    <%= form.text_field :objetivo %>
+  </div>
+
+  <%= form.fields_for :aquecimento do |aquecimento_fields| %>
+    <div class="field">
+      <%= aquecimento_fields.label :articular, "Aquecimento Articular" %>
+      <%= aquecimento_fields.text_field :articular %>
+    </div>
+
+    <div class="field">
+      <%= aquecimento_fields.label :cardio, "Aquecimento Cardio" %>
+      <%= aquecimento_fields.text_field :cardio %>
+    </div>
+
+    <div class="field">
+      <%= aquecimento_fields.label :tecnico, "Aquecimento Técnico" %>
+      <%= aquecimento_fields.text_field :tecnico %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tecnico %>
+    <%= form.text_area :tecnico %>
+  </div>
+
+  <%= form.fields_for :fisico do |fisico_fields| %>
+    <div class="field">
+      <%= fisico_fields.label :grupo, "Grupo muscular" %>
+      <%= fisico_fields.select :grupo, options_for_select([['MI', 'MI'], ['MS', 'MS'], ['TR', 'TR']]) %>
+    </div>
+
+    <div class="field">
+      <%= fisico_fields.label :fase, "Fase de Treinamento" %>
+      <%= fisico_fields.select :fase, options_for_select([['Fase 1', '1'], ['Fase 2', '2'], ['Fase 3', '3'], ['Fase 4', '4']]) %>
+    </div>
+    
+    <div class="field">
+      <%= fisico_fields.label :exercicio, "Exercício" %>
+      <%= fisico_fields.text_field :exercicio %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
