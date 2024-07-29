@@ -10,16 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_26_125828) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_27_143753) do
+  create_table "aquecimentos", force: :cascade do |t|
+    t.string "articular"
+    t.string "cardio"
+    t.string "tecnico"
+    t.integer "aula_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aula_id"], name: "index_aquecimentos_on_aula_id"
+  end
+
   create_table "aulas", force: :cascade do |t|
     t.date "data"
     t.string "conteudo"
     t.string "objetivo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "aquecimento"
-    t.string "tecnico"
-    t.text "fisico"
+    t.json "aquecimento", default: {}
+    t.text "tecnico"
+    t.json "fisico", default: {}
   end
 
   create_table "clients", force: :cascade do |t|
@@ -39,6 +49,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_26_125828) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "fisicos", force: :cascade do |t|
+    t.string "grupo"
+    t.string "fase"
+    t.string "exercicio"
+    t.integer "aula_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aula_id"], name: "index_fisicos_on_aula_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -48,4 +68,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_26_125828) do
     t.string "price_currency", default: "USD", null: false
   end
 
+  add_foreign_key "aquecimentos", "aulas"
+  add_foreign_key "fisicos", "aulas"
 end
