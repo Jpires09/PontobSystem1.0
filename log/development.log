@@ -8007,3 +8007,2721 @@ Processing by AulasController#index as HTML
 Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 4206)
 
 
+Started GET "/" for 127.0.0.1 at 2024-07-31 18:14:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 259)
+  Rendered layout layouts/application.html.erb (Duration: 721.1ms | Allocations: 35888)
+Completed 200 OK in 901ms (Views: 744.0ms | ActiveRecord: 0.0ms | Allocations: 42814)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTurmas (20240731212218)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar, "horario" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731212218') RETURNING "version"[0m
+  [1m[36mTRANSACTION (68.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFaixaEtariaAndModalidadeToturmas (20240731212713)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "turmas" ADD "faixa_etaria" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "turmas" ADD "modalidade" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731212713') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-07-31 18:43:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240731212904_create_semanals.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSemanals (20240731212904)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "semanals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "turmas_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_936d2dbefd"
+FOREIGN KEY ("turmas_id")
+  REFERENCES "turmas" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_semanals_on_turmas_id" ON "semanals" ("turmas_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731212904') RETURNING "version"[0m
+  [1m[36mTRANSACTION (37.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-07-31 18:43:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 193.4ms | Allocations: 24752)
+Completed 200 OK in 271ms (Views: 196.5ms | ActiveRecord: 0.0ms | Allocations: 27945)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 18:44:45 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1635)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2938)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"turmas"}, missing required keys: [:id]
+Did you mean?  turma_url):
+    10:   </ul>
+    11: </div>
+    12: 
+    13: <%= link_to 'Turma', turma_path %>
+  
+app/views/home/index.html.erb:13
+Started GET "/" for 127.0.0.1 at 2024-07-31 18:45:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3951)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 5262)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 18:45:17 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:3
+  Rendered turmas/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1524)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 4750)
+Completed 200 OK in 794ms (Views: 30.3ms | ActiveRecord: 8.1ms | Allocations: 19072)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 18:45:24 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 270.1ms | Allocations: 4232)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 272.5ms | Allocations: 4525)
+  Rendered layout layouts/application.html.erb (Duration: 293.1ms | Allocations: 7458)
+Completed 200 OK in 299ms (Views: 296.4ms | ActiveRecord: 0.0ms | Allocations: 7786)
+
+
+Started POST "/turmas/new" for 127.0.0.1 at 2024-07-31 18:45:44 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/turmas/new"):
+  
+Started POST "/turmas/new" for 127.0.0.1 at 2024-07-31 18:46:40 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/turmas/new"):
+  
+Started POST "/turmas/new" for 127.0.0.1 at 2024-07-31 18:50:02 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/turmas/new"):
+  
+Started POST "/turmas/new" for 127.0.0.1 at 2024-07-31 18:54:42 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/turmas/new"):
+  
+Started POST "/turmas/new" for 127.0.0.1 at 2024-07-31 18:56:16 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/turmas/new"):
+  
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 18:56:18 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 4.1ms | Allocations: 998)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4698)
+Completed 200 OK in 250ms (Views: 24.1ms | ActiveRecord: 9.1ms | Allocations: 106460)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 18:56:21 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"10:30"}, "commit"=>"Cadastrar"}
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms | Allocations: 3638)
+
+
+  
+NameError (undefined local variable or method `turma_params' for #<TurmasController:0x000000000299c8>
+Did you mean?  turma_path):
+  
+app/controllers/turmas_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTurma Load (0.8ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:23:39 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (2.7ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 5138)
+Completed 200 OK in 84ms (Views: 59.5ms | ActiveRecord: 3.9ms | Allocations: 8486)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 19:23:43 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 101.5ms | Allocations: 2418)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 103.7ms | Allocations: 2701)
+  Rendered layout layouts/application.html.erb (Duration: 121.5ms | Allocations: 5631)
+Completed 200 OK in 164ms (Views: 123.2ms | ActiveRecord: 0.0ms | Allocations: 8965)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 19:24:32 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"1", "faixa_etaria"=>"Kids/Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 12.6ms | Allocations: 1517)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1601)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 4517)
+Completed 200 OK in 288ms (Views: 33.7ms | ActiveRecord: 7.8ms | Allocations: 13594)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 19:27:24 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"1", "faixa_etaria"=>"Kids/Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+  [1m[36mTurma Create (62.2ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "1"], ["created_at", "2024-07-31 22:27:24.516156"], ["updated_at", "2024-07-31 22:27:24.516156"], ["faixa_etaria", "Kids/Teens"], ["modalidade", "Parkour"]]
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (76.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+Redirected to http://localhost:3000/turmas/1
+Completed 302 Found in 260ms (ActiveRecord: 140.9ms | Allocations: 9603)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2024-07-31 19:27:24 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+Completed 406 Not Acceptable in 51ms (ActiveRecord: 0.3ms | Allocations: 3622)
+
+
+  
+ActionController::MissingExactTemplate (TurmasController#show is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.4) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.4) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.6) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.6) lib/rack/etag.rb:29:in `call'
+rack (3.1.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.6) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:27:32 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1333)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 5028)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.3ms | Allocations: 6224)
+
+
+Started GET "/turmas/1/edit" for 127.0.0.1 at 2024-07-31 19:27:45 -0300
+Processing by TurmasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/edit.html.erb within layouts/application
+  [1m[36mSemanal Load (0.4ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:38
+  Rendered turmas/_form.html.erb (Duration: 170.3ms | Allocations: 5242)
+  Rendered turmas/edit.html.erb within layouts/application (Duration: 174.3ms | Allocations: 5478)
+  Rendered layout layouts/application.html.erb (Duration: 195.0ms | Allocations: 8401)
+Completed 200 OK in 264ms (Views: 207.1ms | ActiveRecord: 0.5ms | Allocations: 9346)
+
+
+Started PATCH "/turmas/1" for 127.0.0.1 at 2024-07-31 19:27:57 -0300
+Processing by TurmasController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"10:30", "faixa_etaria"=>"Kids/Teens", "modalidade"=>"Parkour", "semanal_id"=>""}, "commit"=>"Update Turma", "id"=>"1"}
+  [1m[36mTurma Load (1.0ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:28:in `update'
+[31mUnpermitted parameter: :semanal_id. Context: { controller: TurmasController, action: update, request: #<ActionDispatch::Request:0x0000771e4857b9c0>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"10:30", "faixa_etaria"=>"Kids/Teens", "modalidade"=>"Parkour", "semanal_id"=>""}, "commit"=>"Update Turma", "controller"=>"turmas", "action"=>"update", "id"=>"1"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:29:in `update'
+  [1m[36mTurma Update (4.1ms)[0m  [1m[33mUPDATE "turmas" SET "horario" = ?, "updated_at" = ? WHERE "turmas"."id" = ?[0m  [["horario", "10:30"], ["updated_at", "2024-07-31 22:27:57.223811"], ["id", 1]]
+  ↳ app/controllers/turmas_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:29:in `update'
+Redirected to http://localhost:3000/turmas/1
+Completed 302 Found in 163ms (ActiveRecord: 5.7ms | Allocations: 3570)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2024-07-31 19:27:57 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.2ms | Allocations: 1111)
+
+
+  
+ActionController::MissingExactTemplate (TurmasController#show is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.4) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.4) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.6) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.6) lib/rack/etag.rb:29:in `call'
+rack (3.1.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.6) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSemanal Create (4.2ms)[0m  [1m[32mINSERT INTO "semanals" ("turmas_id", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["turmas_id", nil], ["created_at", "2024-07-31 22:31:48.111256"], ["updated_at", "2024-07-31 22:31:48.111256"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSemanal Create (2.8ms)[0m  [1m[32mINSERT INTO "semanals" ("turmas_id", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["turmas_id", 1], ["created_at", "2024-07-31 22:37:34.973378"], ["updated_at", "2024-07-31 22:37:34.973378"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/turmas/1/edit" for 127.0.0.1 at 2024-07-31 19:37:54 -0300
+Processing by TurmasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (2.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/edit.html.erb within layouts/application
+  [1m[36mSemanal Load (0.2ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:38
+  Rendered turmas/_form.html.erb (Duration: 29.7ms | Allocations: 16988)
+  Rendered turmas/edit.html.erb within layouts/application (Duration: 30.1ms | Allocations: 17048)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 19887)
+Completed 200 OK in 43ms (Views: 36.5ms | ActiveRecord: 4.4ms | Allocations: 21031)
+
+
+Started GET "/turmas/1/edit" for 127.0.0.1 at 2024-07-31 19:37:55 -0300
+Processing by TurmasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/edit.html.erb within layouts/application
+  [1m[36mSemanal Load (0.1ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:38
+  Rendered turmas/_form.html.erb (Duration: 8.2ms | Allocations: 2064)
+  Rendered turmas/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2124)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4932)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 0.4ms | Allocations: 5752)
+
+
+Started PATCH "/turmas/1" for 127.0.0.1 at 2024-07-31 19:38:03 -0300
+Processing by TurmasController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"10:30", "faixa_etaria"=>"Kids/Teens", "modalidade"=>"Parkour", "semanal_id"=>"1"}, "commit"=>"Update Turma", "id"=>"1"}
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:28:in `update'
+[31mUnpermitted parameter: :semanal_id. Context: { controller: TurmasController, action: update, request: #<ActionDispatch::Request:0x0000771e6073d110>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"10:30", "faixa_etaria"=>"Kids/Teens", "modalidade"=>"Parkour", "semanal_id"=>"1"}, "commit"=>"Update Turma", "controller"=>"turmas", "action"=>"update", "id"=>"1"} }[0m
+Redirected to http://localhost:3000/turmas/1
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 1321)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2024-07-31 19:38:03 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.2ms | Allocations: 1095)
+
+
+  
+ActionController::MissingExactTemplate (TurmasController#show is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.4) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.4) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.5) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.5) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.4) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.4) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.4) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.4) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.4) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.4) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.4) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.4) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.4) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.4) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.4) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.4) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.6) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.6) lib/rack/etag.rb:29:in `call'
+rack (3.1.6) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.6) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/turmas/1" for 127.0.0.1 at 2024-07-31 19:40:18 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4116)
+Completed 200 OK in 28ms (Views: 10.7ms | ActiveRecord: 2.2ms | Allocations: 12438)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:40:21 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1216)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 4248)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms | Allocations: 4638)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 19:40:25 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  [1m[36mSemanal Load (0.3ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:38
+  Rendered turmas/_form.html.erb (Duration: 29.7ms | Allocations: 6926)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 32.0ms | Allocations: 7199)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 10154)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 1.2ms | Allocations: 10565)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 19:40:56 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour", "semanal_id"=>"1"}, "commit"=>"Create Turma"}
+[31mUnpermitted parameter: :semanal_id. Context: { controller: TurmasController, action: create, request: #<ActionDispatch::Request:0x00005ff7a43ad0a8>, params: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour", "semanal_id"=>"1"}, "commit"=>"Create Turma", "controller"=>"turmas", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+  [1m[36mTurma Create (1.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "12:00"], ["created_at", "2024-07-31 22:40:56.891789"], ["updated_at", "2024-07-31 22:40:56.891789"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"]]
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:16:in `create'
+Redirected to http://localhost:3000/turmas/2
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms | Allocations: 2864)
+
+
+Started GET "/turmas/2" for 127.0.0.1 at 2024-07-31 19:40:56 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3124)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 3984)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:40:59 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3878)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 4191)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:44:59 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  Rendered turmas/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1761)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1846)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2896)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @turmas.each do |turma| %>
+    16:       <tr>
+    17:         <td><%= turma.dia_da_semana %></td>
+    18:         <td><%= turma.horario %></td>
+  
+app/views/turmas/index.html.erb:15
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:45:59 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 5212)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 8910)
+Completed 200 OK in 27ms (Views: 18.1ms | ActiveRecord: 2.6ms | Allocations: 12223)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 19:46:04 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 21.4ms | Allocations: 5119)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 5373)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 5452)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms | Allocations: 5849)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `turma' for #<ActionView::Base:0x00000000045d58>
+Did you mean?  @turma):
+    1: <%= form_with(model: turma, local: true) do |form| %>
+    2:   <% if turma.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
+  
+app/views/turmas/_form.html.erb:1
+app/views/turmas/new.html.erb:2
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 19:47:20 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 77.6ms | Allocations: 4261)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 78.9ms | Allocations: 4593)
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 8028)
+Completed 200 OK in 117ms (Views: 97.6ms | ActiveRecord: 2.3ms | Allocations: 15053)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 19:48:03 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario(1i)"=>"2024", "horario(2i)"=>"7", "horario(3i)"=>"31", "horario(4i)"=>"14", "horario(5i)"=>"00", "faixa_etaria"=>"Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 3530)
+
+
+  
+NoMethodError (undefined method `semanal_id=' for #<Turma id: nil, dia_da_semana: "Segunda-Feira", horario: "{1=>2024, 2=>7, 3=>31, 4=>14, 5=>0}", created_at: nil, updated_at: nil, faixa_etaria: "Teens", modalidade: "Parkour">
+Did you mean?  semanal=):
+  
+app/controllers/turmas_controller.rb:16:in `create'
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSemanalIdToTurmas (20240731225404)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "turmas" ADD "semanal_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731225404') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 19:55:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  [1m[36mSemanal Load (1.8ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:35
+  Rendered turmas/_form.html.erb (Duration: 61.5ms | Allocations: 9489)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 62.9ms | Allocations: 9811)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 13227)
+Completed 200 OK in 89ms (Views: 72.5ms | ActiveRecord: 3.6ms | Allocations: 19475)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 19:57:23 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  [1m[36mSemanal Load (0.3ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:35
+  Rendered turmas/_form.html.erb (Duration: 16.2ms | Allocations: 7199)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 7525)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 10941)
+Completed 200 OK in 53ms (Views: 26.3ms | ActiveRecord: 4.1ms | Allocations: 30794)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 19:57:38 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"15:00", "faixa_etaria"=>"Kids", "modalidade"=>"Parkour", "semanal_id"=>"1"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.4ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "15:00"], ["created_at", "2024-07-31 22:57:38.401522"], ["updated_at", "2024-07-31 22:57:38.401522"], ["faixa_etaria", "Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (68.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas/3
+Completed 302 Found in 77ms (ActiveRecord: 69.5ms | Allocations: 2806)
+
+
+Started GET "/turmas/3" for 127.0.0.1 at 2024-07-31 19:57:38 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3373)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 5057)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:57:41 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4406)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 4777)
+
+
+Started GET "/turmas/3" for 127.0.0.1 at 2024-07-31 19:58:02 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3107)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 3925)
+
+
+Started GET "/turmas/3/edit" for 127.0.0.1 at 2024-07-31 19:58:07 -0300
+Processing by TurmasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/edit.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 1.8ms | Allocations: 1628)
+  Rendered turmas/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1801)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1880)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2171)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: @turma, local: true) do |form| %>
+    2:   <% if @turma.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
+    5:       <ul>
+  
+app/views/turmas/_form.html.erb:2
+app/views/turmas/_form.html.erb:1
+app/views/turmas/edit.html.erb:3
+Started GET "/turmas/3/edit" for 127.0.0.1 at 2024-07-31 19:58:20 -0300
+Processing by TurmasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/edit.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 3.7ms | Allocations: 1611)
+  Rendered turmas/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1671)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1750)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2030)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <%= form_with(model: @turma, local: true) do |form| %>
+    2:   <% if @turma.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
+    5:       <ul>
+  
+app/views/turmas/_form.html.erb:2
+app/views/turmas/_form.html.erb:1
+app/views/turmas/edit.html.erb:3
+Started GET "/turmas/3/edit" for 127.0.0.1 at 2024-07-31 19:59:30 -0300
+Processing by TurmasController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/edit.html.erb within layouts/application
+  [1m[36mSemanal Load (0.2ms)[0m  [1m[34mSELECT "semanals".* FROM "semanals"[0m
+  ↳ app/views/turmas/_form.html.erb:35
+  Rendered turmas/_form.html.erb (Duration: 41.0ms | Allocations: 7257)
+  Rendered turmas/edit.html.erb within layouts/application (Duration: 42.3ms | Allocations: 7523)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 10940)
+Completed 200 OK in 75ms (Views: 53.3ms | ActiveRecord: 3.8ms | Allocations: 19599)
+
+
+Started PATCH "/turmas/3" for 127.0.0.1 at 2024-07-31 19:59:41 -0300
+Processing by TurmasController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"14:00", "faixa_etaria"=>"Teens", "modalidade"=>"Parkour", "semanal_id"=>"1"}, "commit"=>"Update Turma", "id"=>"3"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:31:in `update'
+  [1m[36mTurma Update (2.3ms)[0m  [1m[33mUPDATE "turmas" SET "horario" = ?, "updated_at" = ?, "faixa_etaria" = ? WHERE "turmas"."id" = ?[0m  [["horario", "14:00"], ["updated_at", "2024-07-31 22:59:41.888928"], ["faixa_etaria", "Teens"], ["id", 3]]
+  ↳ app/controllers/turmas_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (135.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:31:in `update'
+Redirected to http://localhost:3000/turmas/3
+Completed 302 Found in 151ms (ActiveRecord: 137.8ms | Allocations: 3387)
+
+
+Started GET "/turmas/3" for 127.0.0.1 at 2024-07-31 19:59:42 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3409)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 4332)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 19:59:44 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 4386)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.3ms | Allocations: 4757)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:01:30 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 6.0ms | Allocations: 2282)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2600)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5958)
+Completed 200 OK in 38ms (Views: 19.2ms | ActiveRecord: 2.8ms | Allocations: 13261)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:01:44 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"15:00", "faixa_etaria"=>"Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "15:00"], ["created_at", "2024-07-31 23:01:44.090359"], ["updated_at", "2024-07-31 23:01:44.090359"], ["faixa_etaria", "Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (163.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas/4
+Completed 302 Found in 180ms (ActiveRecord: 166.9ms | Allocations: 2850)
+
+
+Started GET "/turmas/4" for 127.0.0.1 at 2024-07-31 20:01:44 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 337)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 3378)
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 0.4ms | Allocations: 5067)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:01:48 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 4512)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.4ms | Allocations: 4883)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:01:52 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 11.3ms | Allocations: 1467)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 4356)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 4674)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:02:08 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"16:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"AcrobaKids"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "16:00"], ["created_at", "2024-07-31 23:02:08.323755"], ["updated_at", "2024-07-31 23:02:08.323755"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "AcrobaKids"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas/5
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms | Allocations: 2504)
+
+
+Started GET "/turmas/5" for 127.0.0.1 at 2024-07-31 20:02:08 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3095)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 3913)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:02:11 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1180)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4180)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 4492)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:02:14 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 6.1ms | Allocations: 1470)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1547)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4359)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 4676)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:02:35 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"17:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (5.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "17:00"], ["created_at", "2024-07-31 23:02:35.936410"], ["updated_at", "2024-07-31 23:02:35.936410"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas/6
+Completed 302 Found in 21ms (ActiveRecord: 5.8ms | Allocations: 2492)
+
+
+Started GET "/turmas/6" for 127.0.0.1 at 2024-07-31 20:02:35 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3101)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 3919)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:02:38 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1293)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 4332)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.6ms | Allocations: 4644)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:03:48 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 5.2ms | Allocations: 2276)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2594)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5952)
+Completed 200 OK in 36ms (Views: 15.6ms | ActiveRecord: 3.4ms | Allocations: 13254)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:03:53 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1835)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 4865)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.5ms | Allocations: 5310)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:03:55 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 7.2ms | Allocations: 1461)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1538)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 4367)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms | Allocations: 4691)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:04:07 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"18:00", "faixa_etaria"=>"Mini", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (23.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "18:00"], ["created_at", "2024-07-31 23:04:07.223796"], ["updated_at", "2024-07-31 23:04:07.223796"], ["faixa_etaria", "Mini"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (125.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 166ms (ActiveRecord: 148.8ms | Allocations: 2677)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:04:07 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 4447)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 4759)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:04:11 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 6.4ms | Allocations: 1473)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 4362)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 4679)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:04:20 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"18:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "18:30"], ["created_at", "2024-07-31 23:04:20.502777"], ["updated_at", "2024-07-31 23:04:20.502777"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms | Allocations: 2456)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:04:20 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1519)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4579)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 4891)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:04:23 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 11.5ms | Allocations: 1473)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1550)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 4362)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 4679)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:04:36 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"19:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.8ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "19:00"], ["created_at", "2024-07-31 23:04:36.215570"], ["updated_at", "2024-07-31 23:04:36.215570"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms | Allocations: 2459)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:04:36 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1632)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4671)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 4983)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:04:38 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 10.8ms | Allocations: 1470)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1547)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 4359)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms | Allocations: 4676)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:04:46 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Segunda-Feira", "horario"=>"20:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (5.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Segunda-Feira"], ["horario", "20:00"], ["created_at", "2024-07-31 23:04:46.846657"], ["updated_at", "2024-07-31 23:04:46.846657"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 20ms (ActiveRecord: 5.7ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:04:46 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1745)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 4772)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 5084)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:06:26 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3456)
+Completed 200 OK in 31ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 4000)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:07:00 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3975)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5285)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:08:39 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4661)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4746)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 6030)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `turma' for #<ActionView::Base:0x00000000072fb0>
+Did you mean?  turma_url):
+     5:   <thead>
+     6:     <tr>
+     7:       @turmas.each do |turma|
+     8:         <td><%= turma.dia_da_semana %></td>
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+  
+app/views/home/index.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:09:55 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4641)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4726)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 8014)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `turma' for #<ActionView::Base:0x00000000078aa0>
+Did you mean?  @turmas):
+     5:   <thead>
+     6:     <tr>
+     7:       @turmas.each do |turma|
+     8:         <td><%= turma.dia_da_semana %></td>
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+  
+app/views/home/index.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:10:37 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4641)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4726)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 8014)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `turma' for #<ActionView::Base:0x0000000007e5b8>
+Did you mean?  @turmas):
+     5:   <thead>
+     6:     <tr>
+     7:       @turmas.each do |turma|
+     8:         <td><%= turma.dia_da_semana %></td>
+     9:     </tr>
+    10:   </thead>
+    11:   <tbody>
+  
+app/views/home/index.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:11:44 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:13
+  Rendered home/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5352)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 9162)
+Completed 200 OK in 31ms (Views: 22.2ms | ActiveRecord: 2.8ms | Allocations: 12471)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:12:15 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4663)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4748)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 8031)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `turma' for #<ActionView::Base:0x00000000089a08>
+Did you mean?  @turmas):
+     5:   <thead>
+     6:     <tr>
+     7:       @turmas.each do |turma|
+     8:         <td><%= turma.dia_da_semana %></td>
+     9:     </tr>
+    10:   </thead>
+    11:   <%# <tbody>
+  
+app/views/home/index.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:12:46 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1281)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 4597)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%# comentatrio %>
+<h1> Home </h1>
+
+<table>
+  <thead>
+    <tr>
+      <%=@turmas.each do |turma|%>
+        <td><%= turma.dia_da_semana %></td>
+    </tr>
+  </thead>
+  <%# <tbody>
+    
+  </tbody> %>
+</table>
+
+
+<h2> TODO LIST: </h2>
+<div>
+  <ul>
+    <li> Calendário </li>
+    <li> Planejamento Anual </li>
+    <li> Tabela de Horários </li>
+  </ul>
+</div>
+
+):
+1:    <%# comentatrio %>
+2:    <h1> Home </h1>
+3:    
+4:    <table>
+5:      <thead>
+6:        <tr>
+7:          <%=@turmas.each do |turma|%>
+8:            <td><%= turma.dia_da_semana %></td>
+9:        </tr>
+10:      </thead>
+11:      <%# <tbody>
+12:        
+13:      </tbody> %>
+14:    </table>
+15:    
+16:    
+17:    <h2> TODO LIST: </h2>
+18:    <div>
+19:      <ul>
+20:        <li> Calendário </li>
+21:        <li> Planejamento Anual </li>
+22:        <li> Tabela de Horários </li>
+23:      </ul>
+24:    </div>
+  
+app/views/home/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:13:07 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1168)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1259)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 4569)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%# comentatrio %>
+<h1> Home </h1>
+
+<table>
+  <thead>
+    <tr>
+      <%@turmas.each do |turma|%>
+        <td><%= turma.dia_da_semana %></td>
+    </tr>
+  </thead>
+  <%# <tbody>
+    
+  </tbody> %>
+</table>
+
+
+<h2> TODO LIST: </h2>
+<div>
+  <ul>
+    <li> Calendário </li>
+    <li> Planejamento Anual </li>
+    <li> Tabela de Horários </li>
+  </ul>
+</div>
+
+):
+1:    <%# comentatrio %>
+2:    <h1> Home </h1>
+3:    
+4:    <table>
+5:      <thead>
+6:        <tr>
+7:          <%@turmas.each do |turma|%>
+8:            <td><%= turma.dia_da_semana %></td>
+9:        </tr>
+10:      </thead>
+11:      <%# <tbody>
+12:        
+13:      </tbody> %>
+14:    </table>
+15:    
+16:    
+17:    <h2> TODO LIST: </h2>
+18:    <div>
+19:      <ul>
+20:        <li> Calendário </li>
+21:        <li> Planejamento Anual </li>
+22:        <li> Tabela de Horários </li>
+23:      </ul>
+24:    </div>
+  
+app/views/home/index.html.erb:27: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:14:34 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 5412)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9204)
+Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 2.8ms | Allocations: 12513)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:15:20 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5423)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 9210)
+Completed 200 OK in 34ms (Views: 26.5ms | ActiveRecord: 2.6ms | Allocations: 12521)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:19:53 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:13
+  Rendered home/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 5290)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 9054)
+Completed 200 OK in 33ms (Views: 24.2ms | ActiveRecord: 3.3ms | Allocations: 12358)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:22:01 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3934)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 7240)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:23:49 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:11
+  Rendered home/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 5284)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 9066)
+Completed 200 OK in 32ms (Views: 23.6ms | ActiveRecord: 3.9ms | Allocations: 12374)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:23:59 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2260)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5485)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 6041)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:24:05 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 4.6ms | Allocations: 2119)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2398)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5228)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 5618)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:24:23 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"10:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "10:30"], ["created_at", "2024-07-31 23:24:23.972614"], ["updated_at", "2024-07-31 23:24:23.972614"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (83.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 92ms (ActiveRecord: 85.4ms | Allocations: 2696)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:24:24 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1858)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4910)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 5222)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:24:31 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 14.6ms | Allocations: 1471)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1548)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4409)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 4727)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:24:47 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "12:00"], ["created_at", "2024-07-31 23:24:47.088737"], ["updated_at", "2024-07-31 23:24:47.088737"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms | Allocations: 2468)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:24:47 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5017)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 5329)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:25:07 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"14:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "14:00"], ["created_at", "2024-07-31 23:25:07.670124"], ["updated_at", "2024-07-31 23:25:07.670124"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 17ms (ActiveRecord: 5.1ms | Allocations: 2468)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:25:07 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2084)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 5138)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms | Allocations: 5450)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:25:21 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"15:00", "faixa_etaria"=>"Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "15:00"], ["created_at", "2024-07-31 23:25:21.380468"], ["updated_at", "2024-07-31 23:25:21.380468"], ["faixa_etaria", "Teens"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 30ms (ActiveRecord: 5.4ms | Allocations: 2489)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:25:21 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2197)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5251)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.3ms | Allocations: 5563)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:25:30 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"16:00", "faixa_etaria"=>"Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.6ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "16:00"], ["created_at", "2024-07-31 23:25:30.122666"], ["updated_at", "2024-07-31 23:25:30.122666"], ["faixa_etaria", "Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:25:30 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.7ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2310)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 5391)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.7ms | Allocations: 5703)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:25:41 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"17:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"AcrobaKids"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.4ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "17:00"], ["created_at", "2024-07-31 23:25:41.767072"], ["updated_at", "2024-07-31 23:25:41.767072"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "AcrobaKids"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms | Allocations: 2465)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:25:41 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2423)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5478)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 5790)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:26:01 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"18:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "18:00"], ["created_at", "2024-07-31 23:26:01.901340"], ["updated_at", "2024-07-31 23:26:01.901340"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 11ms (ActiveRecord: 2.9ms | Allocations: 2468)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:26:01 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5590)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 5902)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:26:12 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"18:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "18:30"], ["created_at", "2024-07-31 23:26:12.043854"], ["updated_at", "2024-07-31 23:26:12.043854"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms | Allocations: 2477)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:26:12 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2649)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 5712)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.4ms | Allocations: 6024)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:26:34 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"19:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "19:00"], ["created_at", "2024-07-31 23:26:34.531632"], ["updated_at", "2024-07-31 23:26:34.531632"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:26:34 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5813)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 6125)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:26:43 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Terça-Feira", "horario"=>"20:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.8ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Terça-Feira"], ["horario", "20:00"], ["created_at", "2024-07-31 23:26:43.805923"], ["updated_at", "2024-07-31 23:26:43.805923"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms | Allocations: 2477)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:26:43 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2875)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 5920)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.3ms | Allocations: 6232)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:26:59 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"10:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.4ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "10:30"], ["created_at", "2024-07-31 23:26:59.103466"], ["updated_at", "2024-07-31 23:26:59.103466"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms | Allocations: 2483)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:26:59 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2988)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 6036)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms | Allocations: 6348)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:27:10 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.3ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "12:00"], ["created_at", "2024-07-31 23:27:10.891460"], ["updated_at", "2024-07-31 23:27:10.891460"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms | Allocations: 2486)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:27:10 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3101)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 6140)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.4ms | Allocations: 6452)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:27:22 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"14:00", "faixa_etaria"=>"Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "14:00"], ["created_at", "2024-07-31 23:27:22.507905"], ["updated_at", "2024-07-31 23:27:22.507905"], ["faixa_etaria", "Teens"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 13ms (ActiveRecord: 4.8ms | Allocations: 2480)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:27:22 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3214)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 6265)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.4ms | Allocations: 6577)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:27:30 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"15:00", "faixa_etaria"=>"Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "15:00"], ["created_at", "2024-07-31 23:27:30.066381"], ["updated_at", "2024-07-31 23:27:30.066381"], ["faixa_etaria", "Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms | Allocations: 2495)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:27:30 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3327)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 6381)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.4ms | Allocations: 6693)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:27:38 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"16:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"AcrobaKids"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "16:00"], ["created_at", "2024-07-31 23:27:38.539752"], ["updated_at", "2024-07-31 23:27:38.539752"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "AcrobaKids"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 12ms (ActiveRecord: 4.2ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:27:38 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3440)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 6476)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 6788)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:27:58 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"17:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "17:00"], ["created_at", "2024-07-31 23:27:58.534052"], ["updated_at", "2024-07-31 23:27:58.534052"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms | Allocations: 2486)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:27:58 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3553)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 6595)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.4ms | Allocations: 6907)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:28:18 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"18:00", "faixa_etaria"=>"Mini", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.3ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "18:00"], ["created_at", "2024-07-31 23:28:18.536876"], ["updated_at", "2024-07-31 23:28:18.536876"], ["faixa_etaria", "Mini"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 13ms (ActiveRecord: 3.7ms | Allocations: 2462)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:28:18 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 3666)
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 6714)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.3ms | Allocations: 7026)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:28:29 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"18:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "18:30"], ["created_at", "2024-07-31 23:28:29.023531"], ["updated_at", "2024-07-31 23:28:29.023531"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 18ms (ActiveRecord: 4.5ms | Allocations: 2483)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:28:29 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3779)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 6827)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.4ms | Allocations: 7139)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:28:39 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"19:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.4ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "19:00"], ["created_at", "2024-07-31 23:28:39.592064"], ["updated_at", "2024-07-31 23:28:39.592064"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 15ms (ActiveRecord: 4.1ms | Allocations: 2462)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:28:39 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 3892)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 6937)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.3ms | Allocations: 7250)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:28:47 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quarta-Feira", "horario"=>"20:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quarta-Feira"], ["horario", "20:00"], ["created_at", "2024-07-31 23:28:47.127374"], ["updated_at", "2024-07-31 23:28:47.127374"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 15ms (ActiveRecord: 3.5ms | Allocations: 2459)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:28:47 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4005)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 7074)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.4ms | Allocations: 7386)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:28:58 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"10:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.8ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "10:30"], ["created_at", "2024-07-31 23:28:58.171012"], ["updated_at", "2024-07-31 23:28:58.171012"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 15ms (ActiveRecord: 5.5ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:28:58 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 4118)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 7206)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.3ms | Allocations: 7518)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:29:10 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.6ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "12:00"], ["created_at", "2024-07-31 23:29:10.161301"], ["updated_at", "2024-07-31 23:29:10.161301"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 20ms (ActiveRecord: 5.0ms | Allocations: 2469)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:29:10 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.7ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 4232)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 7317)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.6ms | Allocations: 7629)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:29:17 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"14:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (5.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "14:00"], ["created_at", "2024-07-31 23:29:17.681666"], ["updated_at", "2024-07-31 23:29:17.681666"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 19ms (ActiveRecord: 6.4ms | Allocations: 2459)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:29:17 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 4344)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 7398)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.4ms | Allocations: 7710)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:29:27 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"15:00", "faixa_etaria"=>"Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (5.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "15:00"], ["created_at", "2024-07-31 23:29:27.961778"], ["updated_at", "2024-07-31 23:29:27.961778"], ["faixa_etaria", "Teens"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 15ms (ActiveRecord: 5.5ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:29:27 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.7ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 4457)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 7505)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.7ms | Allocations: 7817)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:29:38 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"16:00", "faixa_etaria"=>"Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "16:00"], ["created_at", "2024-07-31 23:29:38.473909"], ["updated_at", "2024-07-31 23:29:38.473909"], ["faixa_etaria", "Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 15ms (ActiveRecord: 4.1ms | Allocations: 2459)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:29:38 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 4570)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 7639)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.3ms | Allocations: 7952)
+
+
+Started GET "/turmas/new" for 127.0.0.1 at 2024-07-31 20:30:35 -0300
+Processing by TurmasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/new.html.erb within layouts/application
+  Rendered turmas/_form.html.erb (Duration: 4.1ms | Allocations: 2255)
+  Rendered turmas/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2577)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5982)
+Completed 200 OK in 30ms (Views: 15.8ms | ActiveRecord: 2.9ms | Allocations: 13350)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:31:00 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"17:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.6ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "17:00"], ["created_at", "2024-07-31 23:31:00.229953"], ["updated_at", "2024-07-31 23:31:00.229953"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (136.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 151ms (ActiveRecord: 140.4ms | Allocations: 2743)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:31:00 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.8ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 5176)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 8227)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.7ms | Allocations: 8658)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:31:12 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"18:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "18:00"], ["created_at", "2024-07-31 23:31:12.822709"], ["updated_at", "2024-07-31 23:31:12.822709"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 13ms (ActiveRecord: 4.0ms | Allocations: 2468)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:31:12 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4796)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 7844)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.4ms | Allocations: 8156)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:31:26 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"18:30", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.4ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "18:30"], ["created_at", "2024-07-31 23:31:26.313169"], ["updated_at", "2024-07-31 23:31:26.313169"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 15ms (ActiveRecord: 5.2ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:31:26 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.7ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4909)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 7951)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.7ms | Allocations: 8263)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:31:39 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"19:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.6ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "19:00"], ["created_at", "2024-07-31 23:31:39.754559"], ["updated_at", "2024-07-31 23:31:39.754559"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:31:39 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 5022)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 8076)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.3ms | Allocations: 8388)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:31:48 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Quinta-Feira", "horario"=>"20:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.2ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Quinta-Feira"], ["horario", "20:00"], ["created_at", "2024-07-31 23:31:48.045981"], ["updated_at", "2024-07-31 23:31:48.045981"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 13ms (ActiveRecord: 3.7ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:31:48 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 5135)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 8216)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.3ms | Allocations: 8528)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:32:07 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.2ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "12:00"], ["created_at", "2024-07-31 23:32:07.276547"], ["updated_at", "2024-07-31 23:32:07.276547"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.4ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:32:07 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.8ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 5248)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 8284)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.8ms | Allocations: 8596)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:32:26 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"14:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "14:00"], ["created_at", "2024-07-31 23:32:26.473545"], ["updated_at", "2024-07-31 23:32:26.473545"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 20ms (ActiveRecord: 4.4ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:32:26 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 5361)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 8415)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.4ms | Allocations: 8728)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:32:34 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"15:00", "faixa_etaria"=>"Teens", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.3ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "15:00"], ["created_at", "2024-07-31 23:32:34.660318"], ["updated_at", "2024-07-31 23:32:34.660318"], ["faixa_etaria", "Teens"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms | Allocations: 2450)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:32:34 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 5474)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 8543)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.3ms | Allocations: 8855)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:32:42 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"16:00", "faixa_etaria"=>"Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "16:00"], ["created_at", "2024-07-31 23:32:42.068717"], ["updated_at", "2024-07-31 23:32:42.068717"], ["faixa_etaria", "Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 17ms (ActiveRecord: 5.7ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:32:42 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 200.6ms | Allocations: 5587)
+  Rendered layout layouts/application.html.erb (Duration: 220.1ms | Allocations: 8661)
+Completed 200 OK in 222ms (Views: 221.0ms | ActiveRecord: 0.4ms | Allocations: 8974)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:32:52 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"17:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (4.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "17:00"], ["created_at", "2024-07-31 23:32:52.225514"], ["updated_at", "2024-07-31 23:32:52.225514"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 16ms (ActiveRecord: 4.9ms | Allocations: 2465)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:32:52 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 5701)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 8801)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.3ms | Allocations: 9113)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:01 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"18:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (3.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "18:00"], ["created_at", "2024-07-31 23:33:01.231483"], ["updated_at", "2024-07-31 23:33:01.231483"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 13ms (ActiveRecord: 3.8ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:01 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 5813)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 8867)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.6ms | Allocations: 9179)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:13 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"19:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "19:00"], ["created_at", "2024-07-31 23:33:13.163003"], ["updated_at", "2024-07-31 23:33:13.163003"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 13ms (ActiveRecord: 2.9ms | Allocations: 2468)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:13 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (1.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 5926)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 8983)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 1.2ms | Allocations: 9295)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:21 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sexta-Feira", "horario"=>"20:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.3ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sexta-Feira"], ["horario", "20:00"], ["created_at", "2024-07-31 23:33:21.558881"], ["updated_at", "2024-07-31 23:33:21.558881"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms | Allocations: 2468)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:21 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 6039)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 9099)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.3ms | Allocations: 9411)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:34 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sábado", "horario"=>"09:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (7.1ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sábado"], ["horario", "09:00"], ["created_at", "2024-07-31 23:33:34.999940"], ["updated_at", "2024-07-31 23:33:34.999940"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 21ms (ActiveRecord: 7.7ms | Allocations: 2462)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:35 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (1.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 6152)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 9197)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 1.1ms | Allocations: 9509)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:41 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sábado", "horario"=>"10:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (1.9ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sábado"], ["horario", "10:00"], ["created_at", "2024-07-31 23:33:42.006425"], ["updated_at", "2024-07-31 23:33:42.006425"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms | Allocations: 2474)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:42 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 6265)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 9334)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.3ms | Allocations: 9646)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:50 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sábado", "horario"=>"11:00", "faixa_etaria"=>"Adults", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.4ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sábado"], ["horario", "11:00"], ["created_at", "2024-07-31 23:33:50.852863"], ["updated_at", "2024-07-31 23:33:50.852863"], ["faixa_etaria", "Adults"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms | Allocations: 2450)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:50 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 6378)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 9442)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.4ms | Allocations: 9754)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:33:59 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sábado", "horario"=>"12:00", "faixa_etaria"=>"Adults", "modalidade"=>"Acrobacias"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.6ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sábado"], ["horario", "12:00"], ["created_at", "2024-07-31 23:33:59.222197"], ["updated_at", "2024-07-31 23:33:59.222197"], ["faixa_etaria", "Adults"], ["modalidade", "Acrobacias"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms | Allocations: 2480)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:33:59 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 21.9ms | Allocations: 6491)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 9554)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.5ms | Allocations: 9866)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:34:08 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sábado", "horario"=>"14:00", "faixa_etaria"=>"Mini", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.5ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sábado"], ["horario", "14:00"], ["created_at", "2024-07-31 23:34:08.435646"], ["updated_at", "2024-07-31 23:34:08.435646"], ["faixa_etaria", "Mini"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms | Allocations: 2471)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:34:08 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6604)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 9652)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.5ms | Allocations: 9964)
+
+
+Started POST "/turmas" for 127.0.0.1 at 2024-07-31 20:34:16 -0300
+Processing by TurmasController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "turma"=>{"dia_da_semana"=>"Sábado", "horario"=>"15:00", "faixa_etaria"=>"Teens/Kids", "modalidade"=>"Parkour"}, "commit"=>"Create Turma"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTurma Create (2.7ms)[0m  [1m[32mINSERT INTO "turmas" ("dia_da_semana", "horario", "created_at", "updated_at", "faixa_etaria", "modalidade", "semanal_id") VALUES (?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["dia_da_semana", "Sábado"], ["horario", "15:00"], ["created_at", "2024-07-31 23:34:16.694408"], ["updated_at", "2024-07-31 23:34:16.694408"], ["faixa_etaria", "Teens/Kids"], ["modalidade", "Parkour"], ["semanal_id", 1]]
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/turmas_controller.rb:18:in `create'
+Redirected to http://localhost:3000/turmas
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms | Allocations: 2450)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:34:16 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 6717)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 9765)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.5ms | Allocations: 10077)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-07-31 20:34:24 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 6717)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 9759)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms | Allocations: 10071)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:34:35 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:11
+  Rendered home/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2092)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5396)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.5ms | Allocations: 5951)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:35:37 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.7ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7
+  Rendered home/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 6380)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 10173)
+Completed 200 OK in 45ms (Views: 33.1ms | ActiveRecord: 4.6ms | Allocations: 13486)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:37:37 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:8:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 6309)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 10091)
+Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 2.8ms | Allocations: 13396)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:38:34 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:8:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 5984)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 9767)
+Completed 200 OK in 33ms (Views: 22.3ms | ActiveRecord: 3.5ms | Allocations: 13071)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:39:46 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:8:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 47.5ms | Allocations: 6961)
+  Rendered layout layouts/application.html.erb (Duration: 58.4ms | Allocations: 10762)
+Completed 200 OK in 64ms (Views: 57.1ms | ActiveRecord: 3.2ms | Allocations: 14067)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:43:10 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 6839)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 10643)
+Completed 200 OK in 32ms (Views: 22.4ms | ActiveRecord: 3.0ms | Allocations: 13956)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-31 20:44:50 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 6763)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 10567)
+Completed 200 OK in 34ms (Views: 23.2ms | ActiveRecord: 2.7ms | Allocations: 13872)
+
+
