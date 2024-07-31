@@ -1,8 +1,40 @@
-<%# comentatrio %>
-<h1> Home </h1>
+<h1>Home</h1>
 
+<table>
+  <thead>
+    <tr>
+      <th>Horário</th>            
+      <% unique_days = @turmas.map(&:dia_da_semana).uniq %>
+      <% unique_days.each do |dia| %>
+        <th><%= dia %></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% sorted_horarios = @turmas.pluck(:horario).uniq.sort %> 
+    <% sorted_horarios.each do |horario| %>
+      <tr>
+        <td><%= horario %></td> 
+        <% unique_days.each do |dia| %>
+          <% turma = @turmas.find { |t| t.horario == horario && t.dia_da_semana == dia } %>
+          <td>
+            <% if turma %>
+              <%= "#{turma.modalidade} - #{turma.faixa_etaria}" %>
+            <% else %>
+              <!-- Deixa a célula vazia se não houver turma para o horário e dia da semana -->
+            <% end %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>TODO LIST:</h2>
 <div>
   <ul>
-    <li><%= link_to 'Clientes', clients_path %></li>
+    <li>Calendário</li>
+    <li>Planejamento Anual</li>
   </ul>
 </div>
