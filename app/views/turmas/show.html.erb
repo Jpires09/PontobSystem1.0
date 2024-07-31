@@ -1,0 +1,24 @@
+<h1>Turma Detalhes</h1>
+
+<p>
+  <strong>Dia da Semana:</strong>
+  <%= @turma.dia_da_semana %>
+</p>
+
+<p>
+  <strong>Horário:</strong>
+  <%= @turma.horario %>
+</p>
+
+<p>
+  <strong>Faixa Etária:</strong>
+  <%= @turma.faixa_etaria %>
+</p>
+
+<p>
+  <strong>Modalidade:</strong>
+  <%= @turma.modalidade %>
+</p>
+
+<%= link_to 'Editar', edit_turma_path(@turma) %> |
+<%= link_to 'Voltar', turmas_path %>
