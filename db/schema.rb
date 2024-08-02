@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_02_165007) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_02_171314) do
   create_table "aquecimentos", force: :cascade do |t|
     t.string "articular"
     t.string "cardio"
@@ -47,6 +47,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_165007) do
     t.date "admition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.integer "turma_id", null: false
+    t.integer "client_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_enrollments_on_client_id"
+    t.index ["turma_id"], name: "index_enrollments_on_turma_id"
   end
 
   create_table "fisicos", force: :cascade do |t|
@@ -88,6 +97,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_165007) do
   end
 
   add_foreign_key "aquecimentos", "aulas"
+  add_foreign_key "enrollments", "clients"
+  add_foreign_key "enrollments", "turmas"
   add_foreign_key "fisicos", "aulas"
   add_foreign_key "semanals", "turmas", column: "turmas_id"
   add_foreign_key "turmas", "employees", column: "professor_titular_id"
