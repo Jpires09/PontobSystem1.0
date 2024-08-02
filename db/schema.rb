@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_31_225404) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_02_165007) do
   create_table "aquecimentos", force: :cascade do |t|
     t.string "articular"
     t.string "cardio"
@@ -83,9 +83,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_31_225404) do
     t.string "faixa_etaria"
     t.string "modalidade"
     t.integer "semanal_id"
+    t.integer "professor_titular_id", default: 1
+    t.index ["professor_titular_id"], name: "index_turmas_on_professor_titular_id"
   end
 
   add_foreign_key "aquecimentos", "aulas"
   add_foreign_key "fisicos", "aulas"
   add_foreign_key "semanals", "turmas", column: "turmas_id"
+  add_foreign_key "turmas", "employees", column: "professor_titular_id"
 end

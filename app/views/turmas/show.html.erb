@@ -20,5 +20,10 @@
   <%= @turma.modalidade %>
 </p>
 
+<p>
+  <strong>Professor:</strong>
+  <%= @turma.professor_titular.name %>
+</p>
+
 <%= link_to 'Editar', edit_turma_path(@turma) %> |
 <%= link_to 'Voltar', turmas_path %>
