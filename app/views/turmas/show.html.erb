@@ -25,5 +25,14 @@
   <%= @turma.professor_titular.name %>
 </p>
 
+<p>
+  <strong>Lista de Matriculados:</strong>
+  <ul>
+    <% @turma.clients.each do |client| %>
+      <li><%= client.name %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Editar', edit_turma_path(@turma) %> |
 <%= link_to 'Voltar', turmas_path %>
