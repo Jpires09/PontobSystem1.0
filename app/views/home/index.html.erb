@@ -20,7 +20,7 @@
           <% turma = @turmas.find { |t| t.horario == horario && t.dia_da_semana == dia } %>
           <td>
             <% if turma %>
-              <%= "#{turma.modalidade} - #{turma.faixa_etaria}" %>
+              <%= link_to "#{turma.modalidade} - #{turma.faixa_etaria}", turma_path(turma) %>
             <% else %>
               <!-- Deixa a célula vazia se não houver turma para o horário e dia da semana -->
             <% end %>
