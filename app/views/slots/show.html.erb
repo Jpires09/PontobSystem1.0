@@ -2,37 +2,37 @@
 
 <p>
   <strong>Dia da Semana:</strong>
-  <%= @turma.dia_da_semana %>
+  <%= @slot.day %>
 </p>
 
 <p>
   <strong>Horário:</strong>
-  <%= @turma.horario %>
+  <%= @slot.time %>
 </p>
 
 <p>
   <strong>Faixa Etária:</strong>
-  <%= @turma.faixa_etaria %>
+  <%= @slot.age %>
 </p>
 
 <p>
   <strong>Modalidade:</strong>
-  <%= @turma.modalidade %>
+  <%= @slot.modality %>
 </p>
 
 <p>
   <strong>Professor:</strong>
-  <%= @turma.professor_titular.name %>
+  <%= @slot.professor_titular.name %>
 </p>
 
 <p>
   <strong>Lista de Matriculados:</strong>
   <ul>
-    <% @turma.clients.each do |client| %>
+    <% @slot.clients.each do |client| %>
       <li><%= client.name %></li>
     <% end %>
   </ul>
 </p>
 
-<%= link_to 'Editar', edit_turma_path(@turma) %> |
-<%= link_to 'Voltar', turmas_path %>
+<%= link_to 'Editar', edit_slot_path(@slot) %> |
+<%= link_to 'Voltar', slots_path %>

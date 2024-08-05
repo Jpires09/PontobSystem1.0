@@ -4,25 +4,25 @@
   <thead>
     <tr>
       <th>Horário</th>            
-      <% unique_days = @turmas.map(&:dia_da_semana).uniq %>
-      <% unique_days.each do |dia| %>
-        <th><%= dia %></th>
+      <% unique_days = @slots.map(&:day).uniq %>
+      <% unique_days.each do |day| %>
+        <th><%= day %></th>
       <% end %>
     </tr>
   </thead>
 
   <tbody>
-    <% sorted_horarios = @turmas.pluck(:horario).uniq.sort %> 
-    <% sorted_horarios.each do |horario| %>
+    <% sorted_time = @slots.pluck(:time).uniq.sort %> 
+    <% sorted_time.each do |time| %>
       <tr>
-        <td><%= horario %></td> 
-        <% unique_days.each do |dia| %>
-          <% turma = @turmas.find { |t| t.horario == horario && t.dia_da_semana == dia } %>
+        <td><%= time %></td> 
+        <% unique_days.each do |day| %>
+          <% slot = @slots.find { |t| t.time == time && t.day == day } %>
           <td>
-            <% if turma %>
-              <%= link_to "#{turma.modalidade} - #{turma.faixa_etaria}", turma_path(turma) %>
+            <% if slot %>
+              <%= link_to "#{slot.modality} - #{slot.age}", slot_path(slot) %>
             <% else %>
-              <!-- Deixa a célula vazia se não houver turma para o horário e dia da semana -->
+              <!-- Deixa a célula vazia se não houver turma para o horário e day da semana -->
             <% end %>
           </td>
         <% end %>

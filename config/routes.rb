@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :employees
   resources :clients
   resources :sessions
-  resources :turmas
+  resources :slots
 end

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @turmas = Turma.all
+    @slots = Slot.all
   end
 end
