@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Detalhes da Aula:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Conteúdo</th>
+      <th>Objetivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @session.date.strftime('%d/%m/%Y') %></td>
+      <td><%= @session.content %></td>
+      <td><%= @session.objective %></td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th>Aquecimento</th>
+      <th>Técnico</th>
+      <th>Físico</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+        <br>
+        <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+        <br>
+        <strong>Técnico:</strong> <%= @session.warm_up["skill"] %>
+      </td>
+  
+      <td> <%= simple_format(@session.skill) %> </td>
+  
+      <td>
+        <strong>Grupo:</strong> <%= @session.physical["group"] %>
+        <br>
+        <strong>Fase:</strong> <%= @session.physical["phase"] %>
+        <br>
+        <strong>Exercício:</strong> <%= @session.physical["exercise"] %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %> |
+<%= link_to 'Destroy', @session, method: :delete, data: { confirm: 'Are you sure?' } %>

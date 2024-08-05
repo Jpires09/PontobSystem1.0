@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :products
   resources :employees
   resources :clients
-  resources :aulas
+  resources :sessions
   resources :turmas
 end

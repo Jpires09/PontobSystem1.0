@@ -10,28 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_02_171314) do
-  create_table "aquecimentos", force: :cascade do |t|
-    t.string "articular"
-    t.string "cardio"
-    t.string "tecnico"
-    t.integer "aula_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["aula_id"], name: "index_aquecimentos_on_aula_id"
-  end
-
-  create_table "aulas", force: :cascade do |t|
-    t.date "data"
-    t.string "conteudo"
-    t.string "objetivo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.json "aquecimento", default: {}
-    t.text "tecnico"
-    t.json "fisico", default: {}
-  end
-
+ActiveRecord::Schema[7.1].define(version: 2024_08_05_215854) do
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.date "birth_date"
@@ -58,14 +37,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_171314) do
     t.index ["turma_id"], name: "index_enrollments_on_turma_id"
   end
 
-  create_table "fisicos", force: :cascade do |t|
-    t.string "grupo"
-    t.string "fase"
-    t.string "exercicio"
-    t.integer "aula_id", null: false
+  create_table "physicals", force: :cascade do |t|
+    t.string "group"
+    t.string "phase"
+    t.string "exercise"
+    t.integer "session_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["aula_id"], name: "index_fisicos_on_aula_id"
+    t.index ["session_id"], name: "index_physicals_on_session_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -84,6 +63,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_171314) do
     t.index ["turmas_id"], name: "index_semanals_on_turmas_id"
   end
 
+  create_table "sessions", force: :cascade do |t|
+    t.date "date"
+    t.string "content"
+    t.string "objective"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.json "warm_up", default: {}
+    t.text "skill"
+    t.json "physical", default: {}
+  end
+
   create_table "turmas", force: :cascade do |t|
     t.string "dia_da_semana"
     t.string "horario"
@@ -96,10 +86,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_171314) do
     t.index ["professor_titular_id"], name: "index_turmas_on_professor_titular_id"
   end
 
-  add_foreign_key "aquecimentos", "aulas"
+  create_table "warm_ups", force: :cascade do |t|
+    t.string "joint"
+    t.string "cardio"
+    t.string "skill"
+    t.integer "session_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["session_id"], name: "index_warm_ups_on_session_id"
+  end
+
   add_foreign_key "enrollments", "clients"
   add_foreign_key "enrollments", "turmas"
-  add_foreign_key "fisicos", "aulas"
+  add_foreign_key "physicals", "sessions"
   add_foreign_key "semanals", "turmas", column: "turmas_id"
   add_foreign_key "turmas", "employees", column: "professor_titular_id"
+  add_foreign_key "warm_ups", "sessions"
 end

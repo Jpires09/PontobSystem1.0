@@ -1,0 +1,59 @@
+<%= form_with model: @session, local: true do |form| %>
+  <% if @session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@session.errors.count, "error") %> prohibited this session from being saved:</h2>
+      <ul>
+        <% @session.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Conteúdo</th>
+        <th>Objetivo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= form.text_area :date, value: @session.date.present? ? @session.date.strftime('%d/%m/%Y') : nil %></td>
+        <td><%= form.text_area :content %></td>
+        <td><%= form.text_area :objective %></td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th>Aquecimento</th>
+        <th>Técnico</th>
+        <th>Físico</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= form.fields_for :warm_up do |warm_up_fields| %>
+            <strong>joint:</strong> <%= warm_up_fields.text_area :joint %><br>
+            <strong>Cardio:</strong> <%= warm_up_fields.text_area :cardio %><br>
+            <strong>Técnico:</strong> <%= warm_up_fields.text_area :skill %>
+          <% end %>
+        </td>
+        <td><%= form.text_area :skill %></td>
+        <td>
+          <%= form.fields_for :physical do |physical_fields| %>
+            <strong>Grupo:</strong> <%= physical_fields.select :group, options_for_select([['MI', 'MI'], ['MS', 'MS'], ['TR', 'TR']]) %><br>
+            <strong>Fase:</strong> <%= physical_fields.select :phase, options_for_select([['Fase 1', '1'], ['Fase 2', '2'], ['Fase 3', '3'], ['Fase 4', '4']]) %><br>
+            <strong>Exercício:</strong> <%= physical_fields.text_area :exercise %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div session="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10725,3 +10725,1337 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 34ms (Views: 23.2ms | ActiveRecord: 2.7ms | Allocations: 13872)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (15.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddProfessorTitularToTurmas (20240802165007)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "turmas" ADD "professor_titular_id" integer DEFAULT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aturmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_aturmas_on_professor_titular_id" ON "aturmas" ("professor_titular_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aturmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "turmas"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "turmas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1, CONSTRAINT "fk_rails_7eb40e6e33"
+FOREIGN KEY ("professor_titular_id")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "turmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "aturmas"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aturmas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTurma Update All (0.2ms)[0m  [1m[33mUPDATE "turmas" SET "professor_titular_id" = ?[0m  [["professor_titular_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aturmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aturmas_on_professor_titular_id" ON "aturmas" ("professor_titular_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aturmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "turmas"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "turmas"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1, CONSTRAINT "fk_rails_7eb40e6e33"
+FOREIGN KEY ("professor_titular_id")
+  REFERENCES "employees" ("id")
+, CONSTRAINT "fk_rails_d6ac88a8a0"
+FOREIGN KEY ("professor_titular")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddProfessorTitularToTurmas (20240802165007)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "turmas" ADD "professor_titular_id" integer DEFAULT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aturmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_aturmas_on_professor_titular_id" ON "aturmas" ("professor_titular_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aturmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "turmas"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "turmas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1, CONSTRAINT "fk_rails_7eb40e6e33"
+FOREIGN KEY ("professor_titular_id")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "turmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "aturmas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aturmas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTurma Update All (0.2ms)[0m  [1m[33mUPDATE "turmas" SET "professor_titular_id" = ?[0m  [["professor_titular_id", 1]]
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240802165007') RETURNING "version"[0m
+  [1m[36mTRANSACTION (69.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2024-08-02 14:01:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 194.2ms | Allocations: 126035)
+  Rendered layout layouts/application.html.erb (Duration: 1875.9ms | Allocations: 148824)
+Completed 200 OK in 3024ms (Views: 2171.8ms | ActiveRecord: 3.1ms | Allocations: 169425)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-08-02 14:01:16 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 7285)
+  Rendered layout layouts/application.html.erb (Duration: 714.9ms | Allocations: 12646)
+Completed 200 OK in 804ms (Views: 717.1ms | ActiveRecord: 0.3ms | Allocations: 13236)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:01:26 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 436.3ms | Allocations: 4847)
+  Rendered layout layouts/application.html.erb (Duration: 436.7ms | Allocations: 4939)
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 0.2ms | Allocations: 8148)
+
+
+  
+ActionView::Template::Error (undefined method `employee_id' for #<Turma id: 1, dia_da_semana: "Segunda-Feira", horario: "10:30", created_at: "2024-07-31 22:27:24.516156000 +0000", updated_at: "2024-07-31 22:27:57.223811000 +0000", faixa_etaria: "Kids/Teens", modalidade: "Parkour", semanal_id: nil, professor_titular_id: 1>):
+    22: 
+    23: <p>
+    24:   <strong>Professor:</strong>
+    25:   <%= @employees.find(@turma.employee_id).name %>
+    26: </p>
+    27: 
+    28: <%= link_to 'Editar', edit_turma_path(@turma) %> |
+  
+app/views/turmas/show.html.erb:25
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:02:19 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3871)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3956)
+Completed 500 Internal Server Error in 520ms (ActiveRecord: 2.8ms | Allocations: 13472)
+
+
+  
+ActionView::Template::Error (undefined method `employee_id' for #<Turma id: 1, dia_da_semana: "Segunda-Feira", horario: "10:30", created_at: "2024-07-31 22:27:24.516156000 +0000", updated_at: "2024-07-31 22:27:57.223811000 +0000", faixa_etaria: "Kids/Teens", modalidade: "Parkour", semanal_id: nil, professor_titular_id: 1>):
+    22: 
+    23: <p>
+    24:   <strong>Professor:</strong>
+    25:   <%= @employees.find(@turma.employee_id).name %>
+    26: </p>
+    27: 
+    28: <%= link_to 'Editar', edit_turma_path(@turma) %> |
+  
+app/views/turmas/show.html.erb:25
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:03:47 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  Rendered turmas/show.html.erb within layouts/application (Duration: 21.9ms | Allocations: 4158)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4243)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 3.1ms | Allocations: 13748)
+
+
+  
+ActionView::Template::Error (undefined method `professor_titular' for #<Turma id: 1, dia_da_semana: "Segunda-Feira", horario: "10:30", created_at: "2024-07-31 22:27:24.516156000 +0000", updated_at: "2024-07-31 22:27:57.223811000 +0000", faixa_etaria: "Kids/Teens", modalidade: "Parkour", semanal_id: nil, professor_titular_id: 1>
+Did you mean?  professor_titular_id
+               professor_titular_id?
+               professor_titular_id=):
+    22: 
+    23: <p>
+    24:   <strong>Professor:</strong>
+    25:   <%= @turma.professor_titular.name %>
+    26: </p>
+    27: 
+    28: <%= link_to 'Editar', edit_turma_path(@turma) %> |
+  
+app/views/turmas/show.html.erb:25
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:05:02 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  Rendered turmas/show.html.erb within layouts/application (Duration: 142.5ms | Allocations: 45160)
+  Rendered layout layouts/application.html.erb (Duration: 155.0ms | Allocations: 48899)
+Completed 200 OK in 181ms (Views: 157.3ms | ActiveRecord: 5.7ms | Allocations: 59227)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEnrollments (20240802171314)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "turma_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_32213721c7"
+FOREIGN KEY ("turma_id")
+  REFERENCES "turmas" ("id")
+, CONSTRAINT "fk_rails_ba721e1a35"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_turma_id" ON "enrollments" ("turma_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_client_id" ON "enrollments" ("client_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240802171314') RETURNING "version"[0m
+  [1m[36mTRANSACTION (119.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:19:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (3.0ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 1]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 449.5ms | Allocations: 21871)
+  Rendered layout layouts/application.html.erb (Duration: 515.8ms | Allocations: 25597)
+Completed 200 OK in 741ms (Views: 548.4ms | ActiveRecord: 6.2ms | Allocations: 37934)
+
+
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEnrollment Create (0.4ms)[0m  [1m[32mINSERT INTO "enrollments" ("turma_id", "client_id", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["turma_id", 51], ["client_id", 1], ["created_at", "2024-08-02 17:24:56.402303"], ["updated_at", "2024-08-02 17:24:56.402303"]]
+  [1m[36mTRANSACTION (92.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ? /* loading for pp */ LIMIT ?[0m  [["turma_id", 51], ["LIMIT", 11]]
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ? /* loading for pp */ LIMIT ?[0m  [["turma_id", 51], ["LIMIT", 11]]
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:25:35 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (1.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 1]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1784)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 4822)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 3.0ms | Allocations: 6037)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-02 14:25:37 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 1]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1660)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4693)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 5511)
+
+
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" INNER JOIN "enrollments" ON "turmas"."id" = "enrollments"."turma_id" WHERE "enrollments"."client_id" = ? /* loading for pp */ LIMIT ?[0m  [["client_id", 1], ["LIMIT", 11]]
+Started GET "/turmas/51" for 127.0.0.1 at 2024-08-02 14:27:04 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mTurma Load (0.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.1ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 51]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 35.0ms | Allocations: 40768)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 43816)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.3ms | Allocations: 44635)
+
+
+Started GET "/aulas" for 127.0.0.1 at 2024-08-02 14:34:11 -0300
+Processing by AulasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/index.html.erb within layouts/application
+  [1m[36mAula Load (1.7ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas"[0m
+  ↳ app/views/aulas/index.html.erb:3
+  Rendered aulas/index.html.erb within layouts/application (Duration: 72.4ms | Allocations: 77913)
+  Rendered layout layouts/application.html.erb (Duration: 78.9ms | Allocations: 81133)
+Completed 200 OK in 149ms (Views: 76.4ms | ActiveRecord: 4.4ms | Allocations: 86139)
+
+
+Started GET "/aulas/new" for 127.0.0.1 at 2024-08-02 14:34:18 -0300
+Processing by AulasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/new.html.erb within layouts/application
+  Rendered aulas/_form.html.erb (Duration: 117.5ms | Allocations: 5075)
+  Rendered aulas/new.html.erb within layouts/application (Duration: 119.4ms | Allocations: 5397)
+  Rendered layout layouts/application.html.erb (Duration: 124.6ms | Allocations: 8380)
+Completed 200 OK in 612ms (Views: 125.9ms | ActiveRecord: 0.9ms | Allocations: 94777)
+
+
+Started GET "/aulas" for 127.0.0.1 at 2024-08-02 14:42:01 -0300
+Processing by AulasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/index.html.erb within layouts/application
+  [1m[36mAula Load (1.5ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas"[0m
+  ↳ app/views/aulas/index.html.erb:3
+  Rendered aulas/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 5247)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 8964)
+Completed 200 OK in 168ms (Views: 34.6ms | ActiveRecord: 2.3ms | Allocations: 14691)
+
+
+Started GET "/aulas/4" for 127.0.0.1 at 2024-08-02 14:42:05 -0300
+Processing by AulasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAula Load (0.2ms)[0m  [1m[34mSELECT "aulas".* FROM "aulas" WHERE "aulas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/aulas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/show.html.erb within layouts/application
+  [1m[36mAquecimento Load (0.2ms)[0m  [1m[34mSELECT "aquecimentos".* FROM "aquecimentos" WHERE "aquecimentos"."aula_id" = ? LIMIT ?[0m  [["aula_id", 4], ["LIMIT", 1]]
+  ↳ app/views/aulas/show.html.erb:30
+  [1m[36mFisico Load (0.2ms)[0m  [1m[34mSELECT "fisicos".* FROM "fisicos" WHERE "fisicos"."aula_id" = ? LIMIT ?[0m  [["aula_id", 4], ["LIMIT", 1]]
+  ↳ app/views/aulas/show.html.erb:40
+  Rendered aulas/show.html.erb within layouts/application (Duration: 319.4ms | Allocations: 16148)
+  Rendered layout layouts/application.html.erb (Duration: 325.9ms | Allocations: 19111)
+Completed 200 OK in 330ms (Views: 326.2ms | ActiveRecord: 0.6ms | Allocations: 20741)
+
+
+Started GET "/aulas/new" for 127.0.0.1 at 2024-08-02 14:44:51 -0300
+Processing by AulasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/new.html.erb within layouts/application
+  Rendered aulas/_form.html.erb (Duration: 23.9ms | Allocations: 5908)
+  Rendered aulas/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 6194)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 6277)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 4.6ms | Allocations: 28887)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `aquecimento_fields' for #<ActionView::Base:0x0000000002ed60>):
+    35:   <tbody>
+    36:     <tr>
+    37:       <td>
+    38:         <strong>Articular:</strong> <%= aquecimento_fields.text_field :articular %>
+    39:         <br>
+    40:         <strong>Cardio:</strong> <%= aquecimento_fields.text_field :cardio %>
+    41:         <br>
+  
+app/views/aulas/_form.html.erb:38
+app/views/aulas/_form.html.erb:1
+app/views/aulas/new.html.erb:2
+Started GET "/aulas/new" for 127.0.0.1 at 2024-08-02 14:51:06 -0300
+Processing by AulasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/new.html.erb within layouts/application
+  Rendered aulas/_form.html.erb (Duration: 4.0ms | Allocations: 2119)
+  Rendered aulas/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2429)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5855)
+Completed 200 OK in 47ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 26765)
+
+
+Started GET "/aulas/new" for 127.0.0.1 at 2024-08-02 14:53:12 -0300
+Processing by AulasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering aulas/new.html.erb within layouts/application
+  Rendered aulas/_form.html.erb (Duration: 50.5ms | Allocations: 2086)
+  Rendered aulas/new.html.erb within layouts/application (Duration: 67.0ms | Allocations: 2398)
+  Rendered layout layouts/application.html.erb (Duration: 219.2ms | Allocations: 5824)
+Completed 200 OK in 839ms (Views: 283.8ms | ActiveRecord: 150.5ms | Allocations: 28481)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-02 14:56:18 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (16.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 355.9ms | Allocations: 6719)
+  Rendered layout layouts/application.html.erb (Duration: 362.6ms | Allocations: 9979)
+Completed 200 OK in 526ms (Views: 347.2ms | ActiveRecord: 16.6ms | Allocations: 15713)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-03 18:02:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (1.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 287.7ms | Allocations: 126002)
+  Rendered layout layouts/application.html.erb (Duration: 707.4ms | Allocations: 148607)
+Completed 200 OK in 1174ms (Views: 712.7ms | ActiveRecord: 11.3ms | Allocations: 173231)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-03 18:12:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 196.5ms | Allocations: 127299)
+  Rendered layout layouts/application.html.erb (Duration: 502.5ms | Allocations: 152099)
+Completed 200 OK in 864ms (Views: 540.1ms | ActiveRecord: 3.8ms | Allocations: 176737)
+
+
+Started GET "/turmas/51" for 127.0.0.1 at 2024-08-03 18:12:43 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mTurma Load (0.4ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 51]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 101.0ms | Allocations: 99282)
+  Rendered layout layouts/application.html.erb (Duration: 179.8ms | Allocations: 102499)
+Completed 200 OK in 191ms (Views: 179.5ms | ActiveRecord: 2.3ms | Allocations: 105782)
+
+
+Started GET "/turmas/51" for 127.0.0.1 at 2024-08-03 18:12:52 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mTurma Load (0.3ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 51]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1735)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 4755)
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 0.8ms | Allocations: 5648)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-08-03 18:12:55 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.9ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 7148)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 10185)
+Completed 200 OK in 63ms (Views: 59.1ms | ActiveRecord: 0.9ms | Allocations: 10589)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-03 18:13:00 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3215)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 6250)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.6ms | Allocations: 6573)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (21.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAquecimentoToWarmup (20240803212357)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[35mALTER TABLE "aquecimento" RENAME TO "warmup"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAquecimentoToWarmup (20240803212357)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[35mALTER TABLE "aquecimento" RENAME TO "warmup"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAquecimentosToWarmUps (20240803212357)
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAquecimentosToWarmUps (20240803212357)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[35mALTER TABLE "aquecimentos" RENAME TO "warm_ups"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_warm_ups_on_aula_id" ON "warm_ups" ("aula_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mDROP INDEX "index_aquecimentos_on_aula_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240803212357') RETURNING "version"[0m
+  [1m[36mTRANSACTION (88.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameColumnsInWarmUps (20240803213036)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "awarm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar DEFAULT NULL, "cardio" varchar DEFAULT NULL, "tecnico" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_awarm_ups_on_aula_id" ON "awarm_ups" ("aula_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "awarm_ups" ("id","joint","cardio","tecnico","aula_id","created_at","updated_at")
+                     SELECT "id","articular","cardio","tecnico","aula_id","created_at","updated_at" FROM "warm_ups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "warm_ups"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "warm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar DEFAULT NULL, "cardio" varchar DEFAULT NULL, "tecnico" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3d31b9b49f"
+FOREIGN KEY ("aula_id")
+  REFERENCES "aulas" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_warm_ups_on_aula_id" ON "warm_ups" ("aula_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "warm_ups" ("id","joint","cardio","tecnico","aula_id","created_at","updated_at")
+                     SELECT "id","joint","cardio","tecnico","aula_id","created_at","updated_at" FROM "awarm_ups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "awarm_ups"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "awarm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar DEFAULT NULL, "cardio" varchar DEFAULT NULL, "skill" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_awarm_ups_on_aula_id" ON "awarm_ups" ("aula_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "awarm_ups" ("id","joint","cardio","skill","aula_id","created_at","updated_at")
+                     SELECT "id","joint","cardio","tecnico","aula_id","created_at","updated_at" FROM "warm_ups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "warm_ups"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "warm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar DEFAULT NULL, "cardio" varchar DEFAULT NULL, "skill" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_3d31b9b49f"
+FOREIGN KEY ("aula_id")
+  REFERENCES "aulas" ("id")
+)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_warm_ups_on_aula_id" ON "warm_ups" ("aula_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "warm_ups" ("id","joint","cardio","skill","aula_id","created_at","updated_at")
+                     SELECT "id","joint","cardio","skill","aula_id","created_at","updated_at" FROM "awarm_ups"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "awarm_ups"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240803213036') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAulasToClasses (20240803213854)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[35mALTER TABLE "aulas" RENAME TO "classes"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240803213854') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemaneColumnsInClasses (20240803215135)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aclasses" ("id","date","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "classes"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "classes"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "classes" ("id","date","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","date","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aclasses"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aclasses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aclasses" ("id","date","content","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","date","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "classes"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "classes"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "classes" ("id","date","content","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","date","content","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aclasses"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aclasses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aclasses" ("id","date","content","objective","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","date","content","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "classes" ("id","date","content","objective","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","date","content","objective","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aclasses"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aclasses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "skill" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aclasses" ("id","date","content","objective","created_at","updated_at","aquecimento","skill","fisico")
+                     SELECT "id","date","content","objective","created_at","updated_at","aquecimento","tecnico","fisico" FROM "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "skill" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "classes" ("id","date","content","objective","created_at","updated_at","aquecimento","skill","fisico")
+                     SELECT "id","date","content","objective","created_at","updated_at","aquecimento","skill","fisico" FROM "aclasses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aclasses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "warm_up" json DEFAULT '{}', "skill" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aclasses" ("id","date","content","objective","created_at","updated_at","warm_up","skill","fisico")
+                     SELECT "id","date","content","objective","created_at","updated_at","aquecimento","skill","fisico" FROM "classes"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "warm_up" json DEFAULT '{}', "skill" text DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "classes" ("id","date","content","objective","created_at","updated_at","warm_up","skill","fisico")
+                     SELECT "id","date","content","objective","created_at","updated_at","warm_up","skill","fisico" FROM "aclasses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aclasses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aclasses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "warm_up" json DEFAULT '{}', "skill" text DEFAULT NULL, "physical" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aclasses" ("id","date","content","objective","created_at","updated_at","warm_up","skill","physical")
+                     SELECT "id","date","content","objective","created_at","updated_at","warm_up","skill","fisico" FROM "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "classes"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "content" varchar DEFAULT NULL, "objective" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "warm_up" json DEFAULT '{}', "skill" text DEFAULT NULL, "physical" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "classes" ("id","date","content","objective","created_at","updated_at","warm_up","skill","physical")
+                     SELECT "id","date","content","objective","created_at","updated_at","warm_up","skill","physical" FROM "aclasses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aclasses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240803215135') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-08-03 18:53:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (6.1ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 7739)
+  Rendered layout layouts/application.html.erb (Duration: 175.1ms | Allocations: 16555)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 9.1ms | Allocations: 23310)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `aulas_path' for #<ActionView::Base:0x000000000132e0>):
+    21:         <%= link_to 'Home', root_path %>
+    22:         <%= link_to 'Produtos', products_path %>
+    23:         <%= link_to 'Funcionários', employees_path %>
+    24:         <%= link_to 'Aulas', aulas_path %>
+    25:         <%= link_to 'Clientes', clients_path %>
+    26:         <%= link_to 'Turmas', turmas_path %>
+    27:       </div>
+  
+app/views/layouts/application.html.erb:24
+Started GET "/" for 127.0.0.1 at 2024-08-03 18:55:16 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.6ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 8394)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 12117)
+Completed 200 OK in 51ms (Views: 31.8ms | ActiveRecord: 3.1ms | Allocations: 18880)
+
+
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 18:55:21 -0300
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1330)
+
+
+  
+NoMethodError (undefined method `all' for Class:Class):
+  
+app/controllers/classes_controller.rb:3:in `index'
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 18:56:57 -0300
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2507)
+
+
+  
+NameError (uninitialized constant ClassesController::Classess):
+  
+app/controllers/classes_controller.rb:3:in `index'
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 18:57:04 -0300
+Processing by ClassesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2462)
+
+
+  
+NameError (uninitialized constant ClassesController::Classes):
+  
+app/controllers/classes_controller.rb:3:in `index'
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameClassesToSessions (20240803215754)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[35mALTER TABLE "classes" RENAME TO "sessions"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240803215754') RETURNING "version"[0m
+  [1m[36mTRANSACTION (113.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 19:04:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ClassesController
+Did you mean?  ClientsController):
+  
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 19:06:49 -0300
+  
+ActionController::RoutingError (uninitialized constant ClassesController
+Did you mean?  ClientsController):
+  
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 19:08:00 -0300
+  
+ActionController::RoutingError (uninitialized constant ClassesController
+Did you mean?  ClientsController):
+  
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 19:08:17 -0300
+  
+ActionController::RoutingError (uninitialized constant ClassesController
+Did you mean?  ClientsController):
+  
+Started GET "/classes" for 127.0.0.1 at 2024-08-03 19:10:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/classes"):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameColumnsOnFisicos (20240805213429)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "grupo" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercicio" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_afisicos_on_aula_id" ON "afisicos" ("aula_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "afisicos" ("id","grupo","phase","exercicio","aula_id","created_at","updated_at")
+                     SELECT "id","grupo","fase","exercicio","aula_id","created_at","updated_at" FROM "fisicos"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "fisicos"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "fisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "grupo" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercicio" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_95a0c75be1"
+FOREIGN KEY ("aula_id")
+  REFERENCES "sessions" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_fisicos_on_aula_id" ON "fisicos" ("aula_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "fisicos" ("id","grupo","phase","exercicio","aula_id","created_at","updated_at")
+                     SELECT "id","grupo","phase","exercicio","aula_id","created_at","updated_at" FROM "afisicos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "afisicos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercicio" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_afisicos_on_aula_id" ON "afisicos" ("aula_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "afisicos" ("id","group","phase","exercicio","aula_id","created_at","updated_at")
+                     SELECT "id","grupo","phase","exercicio","aula_id","created_at","updated_at" FROM "fisicos"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "fisicos"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "fisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercicio" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_95a0c75be1"
+FOREIGN KEY ("aula_id")
+  REFERENCES "sessions" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_fisicos_on_aula_id" ON "fisicos" ("aula_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "fisicos" ("id","group","phase","exercicio","aula_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercicio","aula_id","created_at","updated_at" FROM "afisicos"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "afisicos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "afisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercise" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_afisicos_on_aula_id" ON "afisicos" ("aula_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "afisicos" ("id","group","phase","exercise","aula_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercicio","aula_id","created_at","updated_at" FROM "fisicos"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "fisicos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "fisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercise" varchar DEFAULT NULL, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_95a0c75be1"
+FOREIGN KEY ("aula_id")
+  REFERENCES "sessions" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_fisicos_on_aula_id" ON "fisicos" ("aula_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "fisicos" ("id","group","phase","exercise","aula_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercise","aula_id","created_at","updated_at" FROM "afisicos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "afisicos"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240805213429') RETURNING "version"[0m
+  [1m[36mTRANSACTION (115.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameFisicosToPhysicals (20240805213647)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[35mALTER TABLE "fisicos" RENAME TO "physicals"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_physicals_on_aula_id" ON "physicals" ("aula_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mDROP INDEX "index_fisicos_on_aula_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240805213647') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-08-05 18:37:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.5ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 182.4ms | Allocations: 127298)
+  Rendered layout layouts/application.html.erb (Duration: 315.1ms | Allocations: 149898)
+Completed 200 OK in 383ms (Views: 316.9ms | ActiveRecord: 4.5ms | Allocations: 174518)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2024-08-05 18:37:54 -0300
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:3
+  Rendered sessions/index.html.erb within layouts/application (Duration: 105.4ms | Allocations: 82157)
+  Rendered layout layouts/application.html.erb (Duration: 106.2ms | Allocations: 82250)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 1.4ms | Allocations: 87288)
+
+
+  
+ActionView::Template::Error (undefined method `data' for #<Session id: 3, date: "2024-07-22", content: "Cat e escaladas", objective: "Aquisição de habilidades em Pole Cat", created_at: "2024-07-27 13:38:59.524319000 +0000", updated_at: "2024-07-27 14:42:12.184267000 +0000", warm_up: {}, skill: "KIDS E TEENS\r\n   1- Saída de pole cat para precisã...", physical: {}>
+Did you mean?  date):
+    3: <% @sessions.each do |session| %>
+    4:   <ul>
+    5:     <li>
+    6:         <td><%= session.data %></td>
+    7:         <td><%= session.conteudo %></td>
+    8:       <td> | <%= link_to 'Show', session %></td>
+    9:       <td> | <%= link_to 'Edit', edit_session_path(session) %></td>
+  
+app/views/sessions/index.html.erb:6
+app/views/sessions/index.html.erb:3
+Started GET "/sessions" for 127.0.0.1 at 2024-08-05 18:38:46 -0300
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:3
+  Rendered sessions/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 5893)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 9614)
+Completed 200 OK in 33ms (Views: 21.1ms | ActiveRecord: 3.0ms | Allocations: 15339)
+
+
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:38:51 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  Rendered sessions/show.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4544)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 4625)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.5ms | Allocations: 7786)
+
+
+  
+ActionView::Template::Error (undefined method `data' for #<Session id: 3, date: "2024-07-22", content: "Cat e escaladas", objective: "Aquisição de habilidades em Pole Cat", created_at: "2024-07-27 13:38:59.524319000 +0000", updated_at: "2024-07-27 14:42:12.184267000 +0000", warm_up: {}, skill: "KIDS E TEENS\r\n   1- Saída de pole cat para precisã...", physical: {}>
+Did you mean?  date):
+    12:   </thead>
+    13:   <tbody>
+    14:     <tr>
+    15:       <td><%= @session.data.strftime('%d/%m/%Y') %></td>
+    16:       <td><%= @session.conteudo %></td>
+    17:       <td><%= @session.objetivo %></td>
+    18:     </tr>
+  
+app/views/sessions/show.html.erb:15
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:40:22 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  Rendered sessions/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 8219)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 8313)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 2.9ms | Allocations: 19889)
+
+
+  
+ActionView::Template::Error (Missing model class WarmUp for the Session#warm_up association. You can specify a different model class with the :class_name option.):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+app/views/sessions/show.html.erb:30
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:41:37 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  Rendered sessions/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1930)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2015)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 4.2ms | Allocations: 13458)
+
+
+  
+ActionView::Template::Error (superclass mismatch for class Warm_up):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+app/models/warm_up.rb:1:in `<main>'
+app/views/sessions/show.html.erb:30
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:41:52 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  Rendered sessions/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1948)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2033)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.1ms | Allocations: 13462)
+
+
+  
+ActionView::Template::Error (superclass mismatch for class Warm_up):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+app/models/warm_up.rb:1:in `<main>'
+app/views/sessions/show.html.erb:30
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:45:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  Rendered sessions/show.html.erb within layouts/application (Duration: 46.9ms | Allocations: 11856)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 11984)
+Completed 500 Internal Server Error in 399ms (ActiveRecord: 5.5ms | Allocations: 160969)
+
+
+  
+ActionView::Template::Error (Missing model class WarmUp for the Session#warm_up association. You can specify a different model class with the :class_name option.):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+app/views/sessions/show.html.erb:30
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:47:31 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.9ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  Rendered sessions/show.html.erb within layouts/application (Duration: 33.2ms | Allocations: 7359)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 7444)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 4.6ms | Allocations: 18901)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: warm_ups.session_id):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:49:19 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.6ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  Rendered sessions/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 6257)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6342)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 4.7ms | Allocations: 17762)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: warm_ups.session_id):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:49:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.6ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  Rendered sessions/show.html.erb within layouts/application (Duration: 23.2ms | Allocations: 12790)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 12918)
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 4.0ms | Allocations: 161784)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: warm_ups.session_id):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 18:52:19 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.6ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  Rendered sessions/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 6258)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6343)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 4.3ms | Allocations: 17789)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: warm_ups.session_id):
+    27:   <tbody>
+    28:     <tr>
+    29:       <td>
+    30:         <strong>joint:</strong> <%= @session.warm_up["joint"] %>
+    31:         <br>
+    32:         <strong>Cardio:</strong> <%= @session.warm_up["cardio"] %>
+    33:         <br>
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAulaIdToSessionIdInWarmUps (20240805215650)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "awarm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar DEFAULT NULL, "cardio" varchar DEFAULT NULL, "skill" varchar DEFAULT NULL, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "tindex_awarm_ups_on_aula_id" ON "awarm_ups" ("session_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "awarm_ups" ("id","joint","cardio","skill","session_id","created_at","updated_at")
+                     SELECT "id","joint","cardio","skill","aula_id","created_at","updated_at" FROM "warm_ups"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "warm_ups"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "warm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar DEFAULT NULL, "cardio" varchar DEFAULT NULL, "skill" varchar DEFAULT NULL, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ab36d9d792"
+FOREIGN KEY ("session_id")
+  REFERENCES "sessions" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_warm_ups_on_aula_id" ON "warm_ups" ("session_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "warm_ups" ("id","joint","cardio","skill","session_id","created_at","updated_at")
+                     SELECT "id","joint","cardio","skill","session_id","created_at","updated_at" FROM "awarm_ups"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "awarm_ups"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_warm_ups_on_session_id" ON "warm_ups" ("session_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mDROP INDEX "index_warm_ups_on_aula_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240805215650') RETURNING "version"[0m
+  [1m[36mTRANSACTION (53.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameAulaIdToSessionIdInPhysicals (20240805215854)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aphysicals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercise" varchar DEFAULT NULL, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aphysicals_on_aula_id" ON "aphysicals" ("session_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aphysicals" ("id","group","phase","exercise","session_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercise","aula_id","created_at","updated_at" FROM "physicals"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "physicals"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "physicals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercise" varchar DEFAULT NULL, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9b1896e061"
+FOREIGN KEY ("session_id")
+  REFERENCES "sessions" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_physicals_on_aula_id" ON "physicals" ("session_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "physicals" ("id","group","phase","exercise","session_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercise","session_id","created_at","updated_at" FROM "aphysicals"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aphysicals"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_physicals_on_session_id" ON "physicals" ("session_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mDROP INDEX "index_physicals_on_aula_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240805215854') RETURNING "version"[0m
+  [1m[36mTRANSACTION (89.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 19:02:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (2.7ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.3ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  Rendered sessions/show.html.erb within layouts/application (Duration: 109.5ms | Allocations: 48821)
+  Rendered layout layouts/application.html.erb (Duration: 110.3ms | Allocations: 48913)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 4.6ms | Allocations: 59810)
+
+
+  
+ActionView::Template::Error (Missing model class Physical for the Session#physical association. You can specify a different model class with the :class_name option.):
+    37:       <td> <%= simple_format(@session.skill) %> </td>
+    38:   
+    39:       <td>
+    40:         <strong>Grupo:</strong> <%= @session.physical["group"] %>
+    41:         <br>
+    42:         <strong>Fase:</strong> <%= @session.physical["phase"] %>
+    43:         <br>
+  
+app/views/sessions/show.html.erb:40
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 19:03:28 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.3ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.3ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  Rendered sessions/show.html.erb within layouts/application (Duration: 34.4ms | Allocations: 27124)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 27218)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.5ms | Allocations: 38787)
+
+
+  
+ActionView::Template::Error (Missing model class Physical for the Session#physical association. You can specify a different model class with the :class_name option.):
+    37:       <td> <%= simple_format(@session.skill) %> </td>
+    38:   
+    39:       <td>
+    40:         <strong>Grupo:</strong> <%= @session.physical["group"] %>
+    41:         <br>
+    42:         <strong>Fase:</strong> <%= @session.physical["phase"] %>
+    43:         <br>
+  
+app/views/sessions/show.html.erb:40
+Started GET "/sessions/3" for 127.0.0.1 at 2024-08-05 19:03:45 -0300
+Processing by SessionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/show.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.1ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:30
+  [1m[36mPhysical Load (0.2ms)[0m  [1m[34mSELECT "physicals".* FROM "physicals" WHERE "physicals"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/show.html.erb:40
+  Rendered sessions/show.html.erb within layouts/application (Duration: 65.4ms | Allocations: 53542)
+  Rendered layout layouts/application.html.erb (Duration: 254.0ms | Allocations: 75518)
+Completed 200 OK in 279ms (Views: 254.6ms | ActiveRecord: 4.6ms | Allocations: 87002)
+
+
+Started GET "/sessions/3/edit" for 127.0.0.1 at 2024-08-05 19:04:10 -0300
+Processing by SessionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.1ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/edit.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 11.2ms | Allocations: 4912)
+  Rendered sessions/edit.html.erb within layouts/application (Duration: 12.4ms | Allocations: 5169)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5249)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms | Allocations: 6194)
+
+
+  
+ActionView::Template::Error (undefined method `data' for #<Session id: 3, date: "2024-07-22", content: "Cat e escaladas", objective: "Aquisição de habilidades em Pole Cat", created_at: "2024-07-27 13:38:59.524319000 +0000", updated_at: "2024-07-27 14:42:12.184267000 +0000", warm_up: {}, skill: "KIDS E TEENS\r\n   1- Saída de pole cat para precisã...", physical: {}>
+Did you mean?  date):
+    20:     </thead>
+    21:     <tbody>
+    22:       <tr>
+    23:         <td><%= form.text_area :data, value: @session.data.present? ? @session.data.strftime('%d/%m/%Y') : nil %></td>
+    24:         <td><%= form.text_area :conteudo %></td>
+    25:         <td><%= form.text_area :objetivo %></td>
+    26:       </tr>
+  
+app/views/sessions/_form.html.erb:23
+app/views/sessions/_form.html.erb:1
+app/views/sessions/edit.html.erb:2
+Started GET "/sessions/3/edit" for 127.0.0.1 at 2024-08-05 19:05:59 -0300
+Processing by SessionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSession Load (0.2ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:26:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/edit.html.erb within layouts/application
+  [1m[36mWarmUp Load (0.2ms)[0m  [1m[34mSELECT "warm_ups".* FROM "warm_ups" WHERE "warm_ups"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/_form.html.erb:38
+  [1m[36mPhysical Load (0.1ms)[0m  [1m[34mSELECT "physicals".* FROM "physicals" WHERE "physicals"."session_id" = ? LIMIT ?[0m  [["session_id", 3], ["LIMIT", 1]]
+  ↳ app/views/sessions/_form.html.erb:46
+  Rendered sessions/_form.html.erb (Duration: 131.7ms | Allocations: 20009)
+  Rendered sessions/edit.html.erb within layouts/application (Duration: 132.8ms | Allocations: 20334)
+  Rendered layout layouts/application.html.erb (Duration: 142.6ms | Allocations: 23796)
+Completed 200 OK in 210ms (Views: 149.3ms | ActiveRecord: 4.7ms | Allocations: 35252)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2024-08-05 19:06:03 -0300
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:3
+  Rendered sessions/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 4345)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.4ms | Allocations: 4778)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2024-08-05 19:06:06 -0300
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 3158)
+
+
+  
+NoMethodError (undefined method `build_aquecimento' for #<Session id: nil, date: nil, content: nil, objective: nil, created_at: nil, updated_at: nil, warm_up: {}, skill: nil, physical: {}>):
+  
+app/controllers/sessions_controller.rb:12:in `new'
+Started GET "/sessions/new" for 127.0.0.1 at 2024-08-05 19:06:57 -0300
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.6ms | Allocations: 11975)
+
+
+  
+NoMethodError (undefined method `build_war_up' for #<Session id: nil, date: nil, content: nil, objective: nil, created_at: nil, updated_at: nil, warm_up: {}, skill: nil, physical: {}>
+Did you mean?  build_warm_up):
+  
+app/controllers/sessions_controller.rb:12:in `new'
+Started GET "/sessions/new" for 127.0.0.1 at 2024-08-05 19:07:38 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 8.3ms | Allocations: 2109)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2420)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5846)
+Completed 200 OK in 64ms (Views: 17.2ms | ActiveRecord: 4.6ms | Allocations: 28672)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2024-08-05 19:07:42 -0300
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:3
+  Rendered sessions/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1323)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4372)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.5ms | Allocations: 4818)
+
+
+Started GET "/turmas" for 127.0.0.1 at 2024-08-05 19:07:53 -0300
+Processing by TurmasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/index.html.erb within layouts/application
+  [1m[36mTurma Load (1.0ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/turmas/index.html.erb:15
+  Rendered turmas/index.html.erb within layouts/application (Duration: 334.0ms | Allocations: 83465)
+  Rendered layout layouts/application.html.erb (Duration: 345.6ms | Allocations: 86702)
+Completed 200 OK in 526ms (Views: 346.6ms | ActiveRecord: 2.4ms | Allocations: 92970)
+
+
+Started GET "/turmas/1" for 127.0.0.1 at 2024-08-05 19:07:56 -0300
+Processing by TurmasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTurma Load (0.2ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas" WHERE "turmas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/turmas_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering turmas/show.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/turmas/show.html.erb:25
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT "clients".* FROM "clients" INNER JOIN "enrollments" ON "clients"."id" = "enrollments"."client_id" WHERE "enrollments"."turma_id" = ?[0m  [["turma_id", 1]]
+  ↳ app/views/turmas/show.html.erb:31
+  Rendered turmas/show.html.erb within layouts/application (Duration: 261.1ms | Allocations: 57164)
+  Rendered layout layouts/application.html.erb (Duration: 272.3ms | Allocations: 60428)
+Completed 200 OK in 276ms (Views: 270.6ms | ActiveRecord: 2.9ms | Allocations: 62042)
+
+
+Started GET "/clients" for 127.0.0.1 at 2024-08-05 19:08:01 -0300
+Processing by ClientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:5
+  Rendered clients/index.html.erb within layouts/application (Duration: 56.4ms | Allocations: 40124)
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 43353)
+Completed 200 OK in 73ms (Views: 69.1ms | ActiveRecord: 0.6ms | Allocations: 43922)
+
+
+Started GET "/products" for 127.0.0.1 at 2024-08-05 19:08:04 -0300
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:5
+  Rendered products/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 41086)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 44321)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 1.0ms | Allocations: 45442)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-05 19:08:06 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTurma Load (0.9ms)[0m  [1m[34mSELECT "turmas".* FROM "turmas"[0m
+  ↳ app/views/home/index.html.erb:7:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 3837)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 7051)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.8ms | Allocations: 7609)
+
+
