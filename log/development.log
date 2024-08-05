@@ -12844,3 +12844,14 @@ Processing by SlotsController#show as HTML
 Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.2ms | Allocations: 44667)
 
 
+Started GET "/" for 127.0.0.1 at 2024-08-05 20:20:31 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mSlot Load (27.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/helpers/slot_helper.rb:4:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 54.1ms | Allocations: 7736)
+  Rendered layout layouts/application.html.erb (Duration: 64.6ms | Allocations: 11451)
+Completed 200 OK in 92ms (Views: 41.8ms | ActiveRecord: 28.9ms | Allocations: 18184)
+
+
