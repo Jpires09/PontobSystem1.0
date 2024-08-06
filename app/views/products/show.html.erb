@@ -3,3 +3,6 @@
 <p> <%= @product.description %> </p>
 
 <p>R$ <%= @product.price_cents / 100 %> </p>
+
+<%= button_to "Edit this product", edit_product_path(@product), method: :get, class: "btn btn-primary" %>
+<%= button_to "Destroy this product", @product, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>

@@ -5,8 +5,6 @@
   <% @products.each do |product| %>
     <li>
       <a href="<%= product_path(product) %>"><%= product.name %></a>
-      <%= link_to 'Editar', edit_product_path(product) %>
-      <%= link_to 'Excluir', product, method: :delete, data: { confirm: 'Deseja excluir este item?' } %>
     </li>
   <% end %>
 </ul>
