@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Calendários</h1>
+
+<ul>
+  <% @calendars.each do |calendar| %>
+    <li>
+      <%= link_to "Calendário do Ano #{calendar.year}", calendar_path(calendar) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Novo Calendário', new_calendar_path %>

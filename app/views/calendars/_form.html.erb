@@ -1,0 +1,24 @@
+<%= form_with(model: calendar) do |form| %>
+  <% if calendar.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(calendar.errors.count, "error") %> prohibited this calendar from being saved:</h2>
+
+      <ul>
+        <% calendar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= form_with(model: @calendar, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.number_field :year, in: 2000..2100, step: 1 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<% end %>
