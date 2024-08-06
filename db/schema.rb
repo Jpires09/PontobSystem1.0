@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_05_225251) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
+  create_table "calendar_days", force: :cascade do |t|
+    t.date "date"
+    t.integer "calendar_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["calendar_id"], name: "index_calendar_days_on_calendar_id"
+  end
+
+  create_table "calendars", force: :cascade do |t|
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.date "birth_date"
@@ -96,6 +110,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_05_225251) do
     t.index ["session_id"], name: "index_warm_ups_on_session_id"
   end
 
+  add_foreign_key "calendar_days", "calendars"
   add_foreign_key "enrollments", "clients"
   add_foreign_key "enrollments", "slots"
   add_foreign_key "physicals", "sessions"
