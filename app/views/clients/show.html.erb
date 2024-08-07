@@ -4,6 +4,13 @@
 
 <p> Plano: <%= @client.plan %> </p>
 
-<p> Aulas: <%= @client.groups %> </p>
+<p>Aulas:</p>
+<ul>
+  <% @client.groups.each do |group| %>
+    <li>
+      Dia: <%= group.day %>, Hora: <%= group.time %>, Modalidade: <%= group.modality %>, Faixa Etária: <%= group.age %>
+    </li>
+  <% end %>
+</ul>
 
 <%= button_to "Apagar Cadastro", @client, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
