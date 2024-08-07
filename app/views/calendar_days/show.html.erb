@@ -2,4 +2,12 @@
 
 <p>Data: <%= @calendar_day.date %></p>
 <p>Dia da Semana: <%= @calendar_day.date.strftime("%A") %></p>
-<!-- Exibir sessões associadas ou outras informações, se aplicável -->
+
+<h2>Slots Alocados:</h2>
+<ul>
+  <% @calendar_day.slots.each do |slot| %>
+    <li>
+      Hora: <%= slot.time %> - Modalidade: <%= slot.modality %> - Faixa Etária: <%= slot.age %>
+    </li>
+  <% end %>
+</ul>

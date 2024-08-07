@@ -5,6 +5,7 @@ class SlotsController < ApplicationController
 
   def show
     @slot = Slot.find(params[:id])
+    @clients = @slot.clients
   end
 
   def new

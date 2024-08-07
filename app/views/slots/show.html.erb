@@ -25,15 +25,26 @@
   <%= @slot.professor_titular.name %>
 </p>
 
-<p>
-  <strong>Lista de Matriculados:</strong>
-  <ul>
-    <% @slot.clients.each do |client| %>
-      <li><%= client.name %></li>
+<h2>Clientes Matriculados:</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Plano</th>
+      <th>Data de Nascimento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.name %></td>
+        <td><%= client.plan %></td>
+        <td><%= client.birth_date %></td>
+      </tr>
     <% end %>
-  </ul>
-</p>
-
+  </tbody>
+</table>
+<br>
 <%= link_to 'Editar', edit_slot_path(@slot) %> |
 <%= link_to 'Voltar', slots_path %>
   <%= button_to "Apagar Turma", @slot, method: :delete %>

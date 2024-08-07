@@ -1,6 +1,4 @@
-# app/models/calendar_day.rb
 class CalendarDay < ApplicationRecord
   belongs_to :calendar
-  # Adicione outras associações, se houver, por exemplo:
-  # has_many :sessions
+  has_many :slots, ->(calendar_day) { where(day: calendar_day.date.strftime('%A')) }, foreign_key: 'day', primary_key: 'date'
 end
