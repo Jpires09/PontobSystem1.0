@@ -3,11 +3,11 @@
 <p>Data: <%= @calendar_day.date %></p>
 <p>Dia da Semana: <%= @calendar_day.date.strftime("%A") %></p>
 
-<h2>Slots Alocados:</h2>
+<h2>Turmas Alocados:</h2>
 <ul>
-  <% @calendar_day.slots.each do |slot| %>
+  <% @calendar_day.groups.each do |group| %>
     <li>
-      Hora: <%= slot.time %> - Modalidade: <%= slot.modality %> - Faixa Etária: <%= slot.age %>
+      Hora: <%= group.time %> - Modalidade: <%= group.modality %> - Faixa Etária: <%= group.age %>
     </li>
   <% end %>
 </ul>

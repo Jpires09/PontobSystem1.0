@@ -1,4 +1,4 @@
 class Enrollment < ApplicationRecord
-  belongs_to :turma
+  belongs_to :group
   belongs_to :client
 end

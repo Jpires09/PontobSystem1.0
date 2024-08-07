@@ -3,7 +3,7 @@ class CalendarDaysController < ApplicationController
 
   def show
     @calendar = @calendar_day.calendar
-    @slots = @calendar_day.slots
+    @groups = @calendar_day.groups
   end
 
   private

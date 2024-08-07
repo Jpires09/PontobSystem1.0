@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_07_222933) do
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
     t.string "name"
     t.date "birth_date"
     t.string "plan"
-    t.string "slots"
+    t.string "groups"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -43,12 +43,24 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
   end
 
   create_table "enrollments", force: :cascade do |t|
-    t.integer "slot_id", null: false
+    t.integer "group_id", null: false
     t.integer "client_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_enrollments_on_client_id"
-    t.index ["slot_id"], name: "index_enrollments_on_slot_id"
+    t.index ["group_id"], name: "index_enrollments_on_group_id"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "day"
+    t.string "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "age"
+    t.string "modality"
+    t.integer "semanal_id"
+    t.integer "professor_titular_id", default: 1
+    t.index ["professor_titular_id"], name: "index_groups_on_professor_titular_id"
   end
 
   create_table "physicals", force: :cascade do |t|
@@ -71,10 +83,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
   end
 
   create_table "semanals", force: :cascade do |t|
-    t.integer "turmas_id", null: false
+    t.integer "groups_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["turmas_id"], name: "index_semanals_on_turmas_id"
+    t.index ["groups_id"], name: "index_semanals_on_groups_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -86,18 +98,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
     t.json "warm_up", default: {}
     t.text "skill"
     t.json "physical", default: {}
-  end
-
-  create_table "slots", force: :cascade do |t|
-    t.string "day"
-    t.string "time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "age"
-    t.string "modality"
-    t.integer "semanal_id"
-    t.integer "professor_titular_id", default: 1
-    t.index ["professor_titular_id"], name: "index_slots_on_professor_titular_id"
   end
 
   create_table "warm_ups", force: :cascade do |t|
@@ -112,9 +112,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_06_002134) do
 
   add_foreign_key "calendar_days", "calendars"
   add_foreign_key "enrollments", "clients"
-  add_foreign_key "enrollments", "slots"
+  add_foreign_key "enrollments", "groups"
+  add_foreign_key "groups", "employees", column: "professor_titular_id"
   add_foreign_key "physicals", "sessions"
-  add_foreign_key "semanals", "slots", column: "turmas_id"
-  add_foreign_key "slots", "employees", column: "professor_titular_id"
+  add_foreign_key "semanals", "groups", column: "groups_id"
   add_foreign_key "warm_ups", "sessions"
 end

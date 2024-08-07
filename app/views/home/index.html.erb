@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Horário</th>            
-      <% unique_days = unique_days(@slots) %>
+      <% unique_days = unique_days(@groups) %>
       <% unique_days.each do |day| %>
         <th><%= day %></th>
       <% end %>
@@ -12,14 +12,14 @@
   </thead>
 
   <tbody>
-    <% sorted_time = sorted_times(@slots) %>
+    <% sorted_time = sorted_times(@groups) %>
     <% sorted_time.each do |time| %>
       <tr>
         <td><%= time %></td>
         <% unique_days.each do |day| %>
-          <% slot = find_slot(@slots, time, day) %>
+          <% group = find_group(@groups, time, day) %>
           <td>
-            <%= format_slot_cell(slot) %>
+            <%= format_group_cell(group) %>
           </td>
         <% end %>
       </tr>

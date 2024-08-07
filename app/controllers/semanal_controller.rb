@@ -1,11 +1,11 @@
 class SemanalsController < ApplicationController
   def index
-    @semanal = Turmas.all
+    @semanal = Groups.all
   end
   
   def new
     @semanal = Semanal.new
-    @semanal.build_turmas
+    @semanal.build_groups
   end
 
 end

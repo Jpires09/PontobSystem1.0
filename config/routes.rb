@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :employees
   resources :clients
   resources :sessions
-  resources :slots
+  resources :groups
 
   root to: "home#index"
 end
