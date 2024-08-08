@@ -1,11 +1,12 @@
 class GroupsController < ApplicationController
+  before_action :set_group, only: [:show, :edit, :update, :destroy, :enroll]
+
   def index
     @groups = Group.all
   end
 
   def show
-    @group = Group.find(params[:id])
-    @clients = @group.clients
+    @available_clients = Client.all
   end
 
   def new
@@ -14,31 +15,45 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.semanal_id = 1 # Definindo o valor default para semanal
-
     if @group.save
-      redirect_to groups_path, notice: 'Turma foi criada com sucesso.'
+      redirect_to @group, notice: 'Turma criada com sucesso.'
     else
       render :new
     end
   end
 
   def edit
-    @group = Group.find(params[:id])
   end
 
   def update
-    @group = Group.find(params[:id])
     if @group.update(group_params)
-      redirect_to @group, notice: 'Turma foi atualizada com sucesso.'
+      redirect_to @group, notice: 'Turma atualizada com sucesso.'
     else
       render :edit
     end
   end
 
+  def destroy
+    @group.destroy
+    redirect_to groups_url, notice: 'Turma apagada com sucesso.'
+  end
+
+  def enroll
+    client = Client.find(params[:client_id])
+    if @group.clients << client
+      redirect_to @group, notice: 'Aluno matriculado com sucesso.'
+    else
+      redirect_to @group, alert: 'Erro ao matricular o aluno.'
+    end
+  end
+
   private
 
+  def set_group
+    @group = Group.find(params[:id])
+  end
+
   def group_params
-    params.require(:group).permit(:dia_da_semana, :horario, :faixa_etaria, :modalidade, :semanal_id)
+    params.require(:group).permit(:day, :time, :age, :modality, :professor_titular_id)
   end
 end

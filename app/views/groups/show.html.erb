@@ -1,4 +1,4 @@
-<h1>Turma Detalhes</h1>
+<h1>Detalhes da Turma</h1>
 
 <p>
   <strong>Dia da Semana:</strong>
@@ -25,7 +25,7 @@
   <%= @group.professor_titular.name %>
 </p>
 
-<h2>Clientes Matriculados:</h2>
+<h2>Alunos Matriculados:</h2>
 <table>
   <thead>
     <tr>
@@ -35,7 +35,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @clients.each do |client| %>
+    <% @group.clients.each do |client| %>
       <tr>
         <td><%= client.name %></td>
         <td><%= client.plan %></td>
@@ -44,7 +44,16 @@
     <% end %>
   </tbody>
 </table>
-<br>
+
+<h2>Matricular Aluno</h2>
+<%= form_with url: enroll_group_path(@group), method: :post do %>
+  <div class="field">
+    <%= label_tag :client_id, "Selecione um Aluno" %>
+    <%= select_tag :client_id, options_from_collection_for_select(@available_clients, :id, :name) %>
+  </div>
+  <%= submit_tag "Matricular", class: "btn btn-primary" %>
+<% end %>
+
 <%= link_to 'Editar', edit_group_path(@group) %> |
 <%= link_to 'Voltar', groups_path %>
-  <%= button_to "Apagar Turma", @group, method: :delete %>
+<%= button_to "Apagar Turma", @group, method: :delete %>

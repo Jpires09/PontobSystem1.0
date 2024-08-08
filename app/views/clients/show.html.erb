@@ -13,4 +13,5 @@
   <% end %>
 </ul>
 
+<%= link_to "Editar Cadastro", edit_client_path(@client), class: "btn btn-primary" %>
 <%= button_to "Apagar Cadastro", @client, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>

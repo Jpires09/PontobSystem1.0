@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   resources :employees
   resources :clients
   resources :sessions
-  resources :groups
+  resources :groups do
+    member do
+      post 'enroll'
+    end
+  end
 
   root to: "home#index"
 end
