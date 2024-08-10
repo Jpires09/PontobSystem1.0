@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_07_222933) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_10_143800) do
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
@@ -21,6 +21,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_222933) do
 
   create_table "calendars", force: :cascade do |t|
     t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cash_registers", force: :cascade do |t|
+    t.decimal "opening_balance"
+    t.decimal "closing_balance"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -75,11 +83,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_222933) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "price_cents", default: 0, null: false
     t.string "price_currency", default: "USD", null: false
+    t.decimal "price"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.string "product"
+    t.integer "quantity"
+    t.decimal "price"
+    t.decimal "total"
+    t.date "date"
+    t.integer "cash_register_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cash_register_id"], name: "index_sales_on_cash_register_id"
   end
 
   create_table "semanals", force: :cascade do |t|
@@ -115,6 +135,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_07_222933) do
   add_foreign_key "enrollments", "groups"
   add_foreign_key "groups", "employees", column: "professor_titular_id"
   add_foreign_key "physicals", "sessions"
+  add_foreign_key "sales", "cash_registers"
   add_foreign_key "semanals", "groups", column: "groups_id"
   add_foreign_key "warm_ups", "sessions"
 end
