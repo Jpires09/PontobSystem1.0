@@ -1,0 +1,12 @@
+<%= form_with model: [@cash_register, Sale.new], local: true do |form| %>
+  <%= form.label :product_name %>
+  <%= form.text_field :product_name %>
+
+  <%= form.label :quantity %>
+  <%= form.number_field :quantity %>
+
+  <%= form.label :price %>
+  <%= form.text_field :price %>
+
+  <%= form.submit "Registrar Venda" %>
+<% end %>
