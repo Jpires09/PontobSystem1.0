@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cash_registers
   resources :calendars
   resources :calendar_days  
   resources :products
