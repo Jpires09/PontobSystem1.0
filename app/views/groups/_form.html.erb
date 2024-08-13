@@ -22,12 +22,17 @@
 
   <div class="field">
     <%= form.label :faixa_etaria %>
-    <%= form.select :faixa_etaria, options_for_select([ ["Adults", "Adults"], ["Teens", "Teens"], ["Kids", "Kids"], ["Teens/Kids", "Teens/Kids"], ["Mini", "Mini"]]) %>
+    <%= form.select :faixa_etaria, options_for_select([["Adults", "Adults"], ["Teens", "Teens"], ["Kids", "Kids"], ["Teens/Kids", "Teens/Kids"], ["Mini", "Mini"]]) %>
   </div>
 
   <div class="field">
     <%= form.label :modalidade %>
     <%= form.select :modalidade, options_for_select([["Parkour", "Parkour"], ["Acrobacias", "Acrobacias"], ["AcrobaKids", "AcrobaKids"]]) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :professor_titular_id, "Professor Titular" %>
+    <%= form.collection_select :professor_titular_id, Employee.all, :id, :name, prompt: "Selecione um professor" %>
   </div>
 
   <div class="actions">
