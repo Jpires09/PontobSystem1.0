@@ -1,5 +1,19 @@
-<h1> <%= @employee.name %> </h1>
+<h1><%= @employee.name %></h1>
+<p>Position: <%= @employee.position %></p>
 
-<p> Cargo: <%= @employee.position %> </p>
-
-<p> Desde: <%= @employee.admition %> </p>
+<% if @employee.position == "Professor" %>
+  <h2>Turmas</h2>
+  <% if @groups.present? %>
+    <ul>
+      <% @groups.each do |group| %>
+        <li>
+          <%= link_to "#{group.modality} - #{group.day} às #{group.time}", group_path(group) %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>Este professor não está vinculado a nenhuma turma.</p>
+  <% end %>
+<% else %>
+  <p>O funcionário não é um professor.</p>
+<% end %>

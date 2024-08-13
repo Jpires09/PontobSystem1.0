@@ -5,6 +5,7 @@ class EmployeesController < ApplicationController
 
   def show
     @employee = Employee.find(params[:id])
+    @groups = @employee.groups if @employee.position == "Professor"
   end
 
   def new
