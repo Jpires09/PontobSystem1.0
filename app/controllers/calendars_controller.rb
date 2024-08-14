@@ -1,5 +1,5 @@
 class CalendarsController < ApplicationController
-  helper CalendarHelper
+  helper CalendarsHelper
   before_action :set_calendar, only: %i[ show edit update destroy ]
 
   # GET /calendars or /calendars.json
