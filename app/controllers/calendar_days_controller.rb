@@ -5,6 +5,7 @@ class CalendarDaysController < ApplicationController
     @calendar = @calendar_day.calendar
     translated_day = translate_day(@calendar_day.date.strftime("%A"))
     @groups = Group.where(day: translated_day)
+    @sessions = Session.where(date: @calendar_day.date)
   end
 
   private

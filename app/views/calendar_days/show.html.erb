@@ -3,6 +3,16 @@
 <p>Data: <%= @calendar_day.date %></p>
 <p>Dia da Semana: <%= translate_day(@calendar_day.date.strftime("%A")) %></p>
 
+<h2> Aulas do Dia: </h2>
+<ul>
+  <% @sessions.each do |session| %>
+    <li>
+      <%= link_to session.content, session %>
+    </li>
+  <% end %>
+</ul>
+
+
 <h2>Turmas Alocadas:</h2>
 <ul>
   <% @groups.each do |group| %>
