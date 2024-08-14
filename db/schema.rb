@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_10_143800) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_14_000421) do
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
@@ -81,6 +81,25 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_10_143800) do
     t.index ["session_id"], name: "index_physicals_on_session_id"
   end
 
+  create_table "plan_assignments", force: :cascade do |t|
+    t.integer "special_plan_id", null: false
+    t.integer "group_id", null: false
+    t.integer "client_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_plan_assignments_on_client_id"
+    t.index ["group_id"], name: "index_plan_assignments_on_group_id"
+    t.index ["special_plan_id"], name: "index_plan_assignments_on_special_plan_id"
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string "name"
+    t.string "frequency"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -135,6 +154,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_10_143800) do
   add_foreign_key "enrollments", "groups"
   add_foreign_key "groups", "employees", column: "professor_titular_id"
   add_foreign_key "physicals", "sessions"
+  add_foreign_key "plan_assignments", "clients"
+  add_foreign_key "plan_assignments", "groups"
+  add_foreign_key "plan_assignments", "special_plans"
   add_foreign_key "sales", "cash_registers"
   add_foreign_key "semanals", "groups", column: "groups_id"
   add_foreign_key "warm_ups", "sessions"
