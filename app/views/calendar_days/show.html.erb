@@ -1,13 +1,13 @@
 <h1>Detalhes do Dia <%= @calendar_day.date %></h1>
 
 <p>Data: <%= @calendar_day.date %></p>
-<p>Dia da Semana: <%= @calendar_day.date.strftime("%A") %></p>
+<p>Dia da Semana: <%= translate_day(@calendar_day.date.strftime("%A")) %></p>
 
-<h2>Turmas Alocados:</h2>
+<h2>Turmas Alocadas:</h2>
 <ul>
-  <% @calendar_day.groups.each do |group| %>
-    <li>
-      Hora: <%= group.time %> - Modalidade: <%= group.modality %> - Faixa Etária: <%= group.age %>
-    </li>
+  <% @groups.each do |group| %>
+      <li>
+        Hora: <%= group.time %> - Modalidade: <%= group.modality %> - Faixa Etária: <%= group.age %>
+      </li>
   <% end %>
 </ul>
