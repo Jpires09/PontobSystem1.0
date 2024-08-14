@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_14_194643) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_14_214235) do
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "skill_group", default: 0
+    t.integer "training_phase", default: 0
     t.index ["calendar_id"], name: "index_calendar_days_on_calendar_id"
   end
 
