@@ -1,9 +1,10 @@
 class CalendarDaysController < ApplicationController
-  before_action :set_calendar_day
+  before_action :set_calendar_day, only: %i[show]
 
   def show
     @calendar = @calendar_day.calendar
-    @groups = @calendar_day.groups
+    translated_day = translate_day(@calendar_day.date.strftime("%A"))
+    @groups = Group.where(day: translated_day)
   end
 
   private
@@ -12,7 +13,16 @@ class CalendarDaysController < ApplicationController
     @calendar_day = CalendarDay.find(params[:id])
   end
 
-  def calendar_day_params
-    params.require(:calendar_day).permit(:date, :calendar_id)
+  def translate_day(day)
+    translations = {
+      "Sunday" => "Domingo",
+      "Monday" => "Segunda-Feira",
+      "Tuesday" => "Terça-Feira",
+      "Wednesday" => "Quarta-Feira",
+      "Thursday" => "Quinta-Feira",
+      "Friday" => "Sexta-Feira",
+      "Saturday" => "Sábado"
+    }
+    translations[day] || day
   end
 end
