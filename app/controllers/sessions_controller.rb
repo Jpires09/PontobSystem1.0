@@ -44,8 +44,9 @@ class SessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:session).permit(:data, :conteudo, :objetivo, :tecnico, 
-    aquecimento_attributes: [:id, :articular, :cardio, :tecnico, :_destroy], 
-    fisico_attributes: [:id, :grupo, :fase, :exercicio, :_destroy])
+    params.require(:session).permit(:date, :content, :objective, :skill, 
+      warm_up_attributes: [:id, :joint, :cardio, :skill, :_destroy], 
+      physical_attributes: [:id, :group, :phase, :exercise, :_destroy])
   end
+  
 end
