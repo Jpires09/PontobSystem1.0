@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_14_214235) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_20_215348) do
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
@@ -109,6 +109,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_14_214235) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "credits"
   end
 
   create_table "products", force: :cascade do |t|
