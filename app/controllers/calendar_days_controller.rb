@@ -8,6 +8,17 @@ class CalendarDaysController < ApplicationController
     @sessions = Session.where(date: @calendar_day.date)
   end
 
+  def create
+    @calendar_day = CalendarDay.new(calendar_day_params)
+
+    if @calendar_day.save
+      EventGenerator.new(@calendar_day).call
+      redirect_to @calendar_day, notice: 'Dia do calendário e eventos criados com sucesso.'
+    else
+      render :new
+    end
+  end
+
   private
 
   def set_calendar_day
@@ -18,8 +29,8 @@ class CalendarDaysController < ApplicationController
     translations = {
       "Sunday" => "Domingo",
       "Monday" => "Segunda-Feira",
-      "Tuesday" => "Terça-Feira",
       "Wednesday" => "Quarta-Feira",
+      "Tuesday" => "Terça-Feira",
       "Thursday" => "Quinta-Feira",
       "Friday" => "Sexta-Feira",
       "Saturday" => "Sábado"
