@@ -18,6 +18,7 @@
   <% @groups.each do |group| %>
       <li>
         Hora: <%= group.time %> - Modalidade: <%= group.modality %> - Faixa Etária: <%= group.age %>
+        <%= link_to "Detalhes", group %>
       </li>
   <% end %>
 </ul>
