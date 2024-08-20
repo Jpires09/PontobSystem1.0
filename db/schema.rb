@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_20_215348) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_20_230324) do
+  create_table "attendances", force: :cascade do |t|
+    t.integer "client_id", null: false
+    t.integer "group_id", null: false
+    t.integer "calendar_day_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["calendar_day_id"], name: "index_attendances_on_calendar_day_id"
+    t.index ["client_id"], name: "index_attendances_on_client_id"
+    t.index ["group_id"], name: "index_attendances_on_group_id"
+  end
+
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
@@ -161,6 +172,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_20_215348) do
     t.index ["session_id"], name: "index_warm_ups_on_session_id"
   end
 
+  add_foreign_key "attendances", "calendar_days"
+  add_foreign_key "attendances", "clients"
+  add_foreign_key "attendances", "groups"
   add_foreign_key "calendar_days", "calendars"
   add_foreign_key "enrollments", "clients"
   add_foreign_key "enrollments", "groups"
