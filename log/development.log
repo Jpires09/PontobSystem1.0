@@ -26501,3 +26501,1027 @@ Processing by GroupsController#index as HTML
 Completed 200 OK in 50ms (Views: 32.1ms | ActiveRecord: 1.6ms | Allocations: 7612)
 
 
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:30 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:32 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:32 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:33 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:33 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:33 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:33 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:33 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:34 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:34 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:34 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:34 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:34 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:34 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:35 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:16:36 -0300
+  
+ActiveRecord::StatementInvalid (SQLite3::CorruptException: malformed database schema (index_groups_on_professor_titular_id) - invalid rootpage):
+  
+  [1m[35m (40.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-08-25 14:25:33.317629', '2024-08-25 14:25:33.317642') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClients (20240707152416)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birth_date" date, "plan" varchar, "classes" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240707152416') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DropProducts (20240713153136)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.5ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2024-08-25 11:29:13 -0300
+  [1m[35m (48.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 45 pending migrations:
+
+db/migrate/20240707152416_create_clients.rb
+db/migrate/20240713153136_drop_products.rb
+db/migrate/20240713154054_change_price_from_integer_to_money_on_products.rb
+db/migrate/20240717224704_delete_products.rb
+db/migrate/20240717225433_create_products.rb
+db/migrate/20240717225831_monetize_product.rb
+db/migrate/20240717235601_create_employees.rb
+db/migrate/20240726123118_create_aulas.rb
+db/migrate/20240726123257_add_aquecimento_to_aula.rb
+db/migrate/20240726125517_add_tecnico_to_aulas.rb
+db/migrate/20240726125828_add_fisico_to_aulas.rb
+db/migrate/20240726145853_change_aquecimento_and_fisico_to_json.rb
+db/migrate/20240727131905_create_aquecimentos.rb
+db/migrate/20240727132003_create_fisicos.rb
+db/migrate/20240727143753_change_tecnico_in_aulas_to_text.rb
+db/migrate/20240731212218_create_turmas.rb
+db/migrate/20240731212713_add_faixa_etaria_and_modalidade_toturmas.rb
+db/migrate/20240731212904_create_semanals.rb
+db/migrate/20240731225404_add_semanal_id_to_turmas.rb
+db/migrate/20240802165007_add_professor_titular_to_turmas.rb
+db/migrate/20240802171314_create_enrollments.rb
+db/migrate/20240803212357_rename_aquecimentos_to_warm_ups.rb
+db/migrate/20240803213036_rename_columns_in_warm_ups.rb
+db/migrate/20240803213854_rename_aulas_to_classes.rb
+db/migrate/20240803215135_remane_columns_in_classes.rb
+db/migrate/20240803215754_rename_classes_to_sessions.rb
+db/migrate/20240805213429_rename_columns_on_fisicos.rb
+db/migrate/20240805213647_rename_fisicos_to_physicals.rb
+db/migrate/20240805215650_rename_aula_id_to_session_id_in_warm_ups.rb
+db/migrate/20240805215854_rename_aula_id_to_session_id_in_physicals.rb
+db/migrate/20240805222611_rename_classes_to_slots_in_clients.rb
+db/migrate/20240805223354_rename_columns_in_turmas.rb
+db/migrate/20240805223526_rename_turmas_to_slots.rb
+db/migrate/20240805225251_rename_turma_id_in_enrollments.rb
+db/migrate/20240805235716_add_year_to_calendar.rb
+db/migrate/20240806000944_drop_calendars.rb
+db/migrate/20240806001145_create_calendars.rb
+db/migrate/20240806002134_create_calendar_days.rb
+db/migrate/20240807222933_rename_slots_to_groups.rb
+db/migrate/20240810142405_create_cash_registers.rb
+db/migrate/20240810142539_create_sales.rb
+db/migrate/20240810143800_change_columns_in_products.rb
+db/migrate/20240814000138_create_plans.rb
+db/migrate/20240814000421_create_plan_assignments.rb
+db/migrate/20240814194643_create_events.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (88.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-08-25 14:29:29.414578', '2024-08-25 14:29:29.414590') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClients (20240707152416)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birth_date" date, "plan" varchar, "classes" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240707152416') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DropProducts (20240713153136)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.6ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropProducts (20240713153136)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropProducts (20240713153136)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangePriceFromIntegerToMoneyOnProducts (20240713154054)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE "products" ADD "price_cents" integer DEFAULT 0 NOT NULL[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeleteProducts (20240717224704)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProducts (20240717225433)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240717225433') RETURNING "version"[0m
+  [1m[36mTRANSACTION (26.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to MonetizeProduct (20240717225831)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "products" ADD "price_cents" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "products" ADD "price_currency" varchar DEFAULT 'USD' NOT NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240717225831') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEmployees (20240717235601)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "employees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "admition" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240717235601') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAulas (20240726123118)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "aulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date, "conteudo" varchar, "objetivo" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240726123118') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAquecimentoToAula (20240726123257)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "aulas" ADD "aquecimento" text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240726123257') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTecnicoToAulas (20240726125517)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "aulas" ADD "tecnico" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240726125517') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFisicoToAulas (20240726125828)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "aulas" ADD "fisico" text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240726125828') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeAquecimentoAndFisicoToJson (20240726145853)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" text DEFAULT NULL, "tecnico" varchar DEFAULT NULL, "fisico" text DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aaulas" ("id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aulas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aulas"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "aulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" varchar DEFAULT NULL, "fisico" text DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aulas" ("id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aaulas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aaulas"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" varchar DEFAULT NULL, "fisico" text DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aaulas" ("id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aulas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aulas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "aulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" varchar DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aulas" ("id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aaulas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aaulas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240726145853') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAquecimentos (20240727131905)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "aquecimentos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "articular" varchar, "cardio" varchar, "tecnico" varchar, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_d2765b835f"
+FOREIGN KEY ("aula_id")
+  REFERENCES "aulas" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_aquecimentos_on_aula_id" ON "aquecimentos" ("aula_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240727131905') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFisicos (20240727132003)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "fisicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "grupo" varchar, "fase" varchar, "exercicio" varchar, "aula_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_95a0c75be1"
+FOREIGN KEY ("aula_id")
+  REFERENCES "aulas" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_fisicos_on_aula_id" ON "fisicos" ("aula_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240727132003') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeTecnicoInAulasToText (20240727143753)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" varchar DEFAULT NULL, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aaulas" ("id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aulas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aulas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "aulas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date DEFAULT NULL, "conteudo" varchar DEFAULT NULL, "objetivo" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "aquecimento" json DEFAULT '{}', "tecnico" text, "fisico" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aulas" ("id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico")
+                     SELECT "id","data","conteudo","objetivo","created_at","updated_at","aquecimento","tecnico","fisico" FROM "aaulas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aaulas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240727143753') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTurmas (20240731212218)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar, "horario" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731212218') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFaixaEtariaAndModalidadeToturmas (20240731212713)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "turmas" ADD "faixa_etaria" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "turmas" ADD "modalidade" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731212713') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSemanals (20240731212904)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "semanals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "turmas_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_936d2dbefd"
+FOREIGN KEY ("turmas_id")
+  REFERENCES "turmas" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_semanals_on_turmas_id" ON "semanals" ("turmas_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731212904') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSemanalIdToTurmas (20240731225404)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "turmas" ADD "semanal_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240731225404') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddProfessorTitularToTurmas (20240802165007)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "turmas" ADD "professor_titular_id" integer DEFAULT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aturmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aturmas_on_professor_titular_id" ON "aturmas" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aturmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "turmas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "turmas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1, CONSTRAINT "fk_rails_7eb40e6e33"
+FOREIGN KEY ("professor_titular_id")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "turmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "aturmas"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "aturmas"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddProfessorTitularToTurmas (20240802165007)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.9ms)[0m  [1m[35mALTER TABLE "turmas" ADD "professor_titular_id" integer DEFAULT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aturmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aturmas_on_professor_titular_id" ON "aturmas" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aturmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "turmas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "turmas"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "turmas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dia_da_semana" varchar DEFAULT NULL, "horario" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "faixa_etaria" varchar DEFAULT NULL, "modalidade" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1, CONSTRAINT "fk_rails_7eb40e6e33"
+FOREIGN KEY ("professor_titular_id")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_turmas_on_professor_titular_id" ON "turmas" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "turmas" ("id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id")
+                     SELECT "id","dia_da_semana","horario","created_at","updated_at","faixa_etaria","modalidade","semanal_id","professor_titular_id" FROM "aturmas"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aturmas"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddProfessorTitularToTurmas (20240802165007)
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddProfessorTitularToGroups (20240802165007)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "groups" ADD "professor_titular_id" integer DEFAULT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "calendar_days"[0m
+  [1m[35m (99.6ms)[0m  [1m[35mCREATE TABLE "calendar_days" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "calendar_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_calendar_days_on_calendar_id" ON "calendar_days" ("calendar_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "calendars"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "calendars" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cash_registers"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "cash_registers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "opening_balance" decimal, "closing_balance" decimal, "date" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "clients"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birth_date" date, "plan" varchar, "groups" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "employees"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "employees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "admition" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "enrollments"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_client_id" ON "enrollments" ("client_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_group_id" ON "enrollments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "events"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_day_id" integer NOT NULL, "group_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_events_on_calendar_day_id" ON "events" ("calendar_day_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_events_on_group_id" ON "events" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "groups"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "day" varchar, "time" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "age" varchar, "modality" varchar, "semanal_id" integer, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_groups_on_professor_titular_id" ON "groups" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "physicals"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "physicals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar, "phase" varchar, "exercise" varchar, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_physicals_on_session_id" ON "physicals" ("session_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "plan_assignments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "plan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_client_id" ON "plan_assignments" ("client_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_group_id" ON "plan_assignments" ("group_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_special_plan_id" ON "plan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "plans" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "frequency" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "price_currency" varchar DEFAULT 'USD' NOT NULL, "price" decimal)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sales"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "sales" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "product" varchar, "quantity" integer, "price" decimal, "total" decimal, "date" date, "cash_register_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_sales_on_cash_register_id" ON "sales" ("cash_register_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "semanals"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "semanals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "groups_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_semanals_on_groups_id" ON "semanals" ("groups_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "content" varchar, "objective" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "warm_up" json DEFAULT '{}', "skill" text, "physical" json DEFAULT '{}')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "warm_ups"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "warm_ups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "joint" varchar, "cardio" varchar, "skill" varchar, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_warm_ups_on_session_id" ON "warm_ups" ("session_id")[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acalendar_days" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "calendar_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acalendar_days_on_calendar_id" ON "acalendar_days" ("calendar_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acalendar_days" ("id","date","calendar_id","created_at","updated_at")
+                     SELECT "id","date","calendar_id","created_at","updated_at" FROM "calendar_days"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "calendar_days"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "calendar_days" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date DEFAULT NULL, "calendar_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_b1b3428a67"
+FOREIGN KEY ("calendar_id")
+  REFERENCES "calendars" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_calendar_days_on_calendar_id" ON "calendar_days" ("calendar_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "calendar_days" ("id","date","calendar_id","created_at","updated_at")
+                     SELECT "id","date","calendar_id","created_at","updated_at" FROM "acalendar_days"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "acalendar_days"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_group_id" ON "aenrollments" ("group_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_client_id" ON "aenrollments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","group_id","client_id","created_at","updated_at" FROM "enrollments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "enrollments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ba721e1a35"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_client_id" ON "enrollments" ("client_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_group_id" ON "enrollments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","group_id","client_id","created_at","updated_at" FROM "aenrollments"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aenrollments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_group_id" ON "aenrollments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_client_id" ON "aenrollments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","group_id","client_id","created_at","updated_at" FROM "enrollments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "enrollments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ba721e1a35"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+, CONSTRAINT "fk_rails_0ca8ba010f"
+FOREIGN KEY ("group_id")
+  REFERENCES "groups" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_client_id" ON "enrollments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_group_id" ON "enrollments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","group_id","client_id","created_at","updated_at" FROM "aenrollments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aenrollments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_day_id" integer NOT NULL, "group_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevents_on_group_id" ON "aevents" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevents_on_calendar_day_id" ON "aevents" ("calendar_day_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","calendar_day_id","group_id","created_at","updated_at")
+                     SELECT "id","calendar_day_id","group_id","created_at","updated_at" FROM "events"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_day_id" integer NOT NULL, "group_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ef33111bbe"
+FOREIGN KEY ("calendar_day_id")
+  REFERENCES "calendar_days" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_events_on_calendar_day_id" ON "events" ("calendar_day_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_events_on_group_id" ON "events" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id","calendar_day_id","group_id","created_at","updated_at")
+                     SELECT "id","calendar_day_id","group_id","created_at","updated_at" FROM "aevents"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aevents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_day_id" integer NOT NULL, "group_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevents_on_group_id" ON "aevents" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aevents_on_calendar_day_id" ON "aevents" ("calendar_day_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aevents" ("id","calendar_day_id","group_id","created_at","updated_at")
+                     SELECT "id","calendar_day_id","group_id","created_at","updated_at" FROM "events"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "events"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "calendar_day_id" integer NOT NULL, "group_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ef33111bbe"
+FOREIGN KEY ("calendar_day_id")
+  REFERENCES "calendar_days" ("id")
+, CONSTRAINT "fk_rails_61fbf6ca48"
+FOREIGN KEY ("group_id")
+  REFERENCES "groups" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_events_on_calendar_day_id" ON "events" ("calendar_day_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_events_on_group_id" ON "events" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id","calendar_day_id","group_id","created_at","updated_at")
+                     SELECT "id","calendar_day_id","group_id","created_at","updated_at" FROM "aevents"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aevents"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agroups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "day" varchar DEFAULT NULL, "time" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "age" varchar DEFAULT NULL, "modality" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_agroups_on_professor_titular_id" ON "agroups" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "agroups" ("id","day","time","created_at","updated_at","age","modality","semanal_id","professor_titular_id")
+                     SELECT "id","day","time","created_at","updated_at","age","modality","semanal_id","professor_titular_id" FROM "groups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "groups"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "day" varchar DEFAULT NULL, "time" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "age" varchar DEFAULT NULL, "modality" varchar DEFAULT NULL, "semanal_id" integer DEFAULT NULL, "professor_titular_id" integer DEFAULT 1, CONSTRAINT "fk_rails_434760a478"
+FOREIGN KEY ("professor_titular_id")
+  REFERENCES "employees" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_groups_on_professor_titular_id" ON "groups" ("professor_titular_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "groups" ("id","day","time","created_at","updated_at","age","modality","semanal_id","professor_titular_id")
+                     SELECT "id","day","time","created_at","updated_at","age","modality","semanal_id","professor_titular_id" FROM "agroups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "agroups"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aphysicals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercise" varchar DEFAULT NULL, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aphysicals_on_session_id" ON "aphysicals" ("session_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aphysicals" ("id","group","phase","exercise","session_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercise","session_id","created_at","updated_at" FROM "physicals"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "physicals"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "physicals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar DEFAULT NULL, "phase" varchar DEFAULT NULL, "exercise" varchar DEFAULT NULL, "session_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9b1896e061"
+FOREIGN KEY ("session_id")
+  REFERENCES "sessions" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_physicals_on_session_id" ON "physicals" ("session_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "physicals" ("id","group","phase","exercise","session_id","created_at","updated_at")
+                     SELECT "id","group","phase","exercise","session_id","created_at","updated_at" FROM "aphysicals"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aphysicals"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aplan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_special_plan_id" ON "aplan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_group_id" ON "aplan_assignments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_client_id" ON "aplan_assignments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aplan_assignments" ("id","special_plan_id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","special_plan_id","group_id","client_id","created_at","updated_at" FROM "plan_assignments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "plan_assignments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "plan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1e6a801374"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_client_id" ON "plan_assignments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_group_id" ON "plan_assignments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_special_plan_id" ON "plan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "plan_assignments" ("id","special_plan_id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","special_plan_id","group_id","client_id","created_at","updated_at" FROM "aplan_assignments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aplan_assignments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aplan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_special_plan_id" ON "aplan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_group_id" ON "aplan_assignments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_client_id" ON "aplan_assignments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aplan_assignments" ("id","special_plan_id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","special_plan_id","group_id","client_id","created_at","updated_at" FROM "plan_assignments"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "plan_assignments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "plan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1e6a801374"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+, CONSTRAINT "fk_rails_051ef3afb9"
+FOREIGN KEY ("group_id")
+  REFERENCES "groups" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_client_id" ON "plan_assignments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_group_id" ON "plan_assignments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_special_plan_id" ON "plan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "plan_assignments" ("id","special_plan_id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","special_plan_id","group_id","client_id","created_at","updated_at" FROM "aplan_assignments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aplan_assignments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aplan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_special_plan_id" ON "aplan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_group_id" ON "aplan_assignments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aplan_assignments_on_client_id" ON "aplan_assignments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aplan_assignments" ("id","special_plan_id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","special_plan_id","group_id","client_id","created_at","updated_at" FROM "plan_assignments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "plan_assignments"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "plan_assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "special_plan_id" integer NOT NULL, "group_id" integer NOT NULL, "client_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_051ef3afb9"
+FOREIGN KEY ("group_id")
+  REFERENCES "groups" ("id")
+, CONSTRAINT "fk_rails_1e6a801374"
+FOREIGN KEY ("client_id")
+  REFERENCES "clients" ("id")
+, CONSTRAINT "fk_rails_e5a92e15de"
+FOREIGN KEY ("special_plan_id")
+  REFERENCES "special_plans" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_client_id" ON "plan_assignments" ("client_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_group_id" ON "plan_assignments" ("group_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_plan_assignments_on_special_plan_id" ON "plan_assignments" ("special_plan_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "plan_assignments" ("id","special_plan_id","group_id","client_id","created_at","updated_at")
+                     SELECT "id","special_plan_id","group_id","client_id","created_at","updated_at" FROM "aplan_assignments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (60.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-08-27 23:08:33.457059', '2024-08-27 23:08:33.457073') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateClients (20240707152416)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "clients" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "birth_date" date, "plan" varchar, "classes" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2024-08-27 20:11:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 42 pending migrations:
+
+db/migrate/20240707152416_create_clients.rb
+db/migrate/20240717225433_create_products.rb
+db/migrate/20240717225831_monetize_product.rb
+db/migrate/20240717235601_create_employees.rb
+db/migrate/20240726123118_create_aulas.rb
+db/migrate/20240726123257_add_aquecimento_to_aula.rb
+db/migrate/20240726125517_add_tecnico_to_aulas.rb
+db/migrate/20240726125828_add_fisico_to_aulas.rb
+db/migrate/20240726145853_change_aquecimento_and_fisico_to_json.rb
+db/migrate/20240727131905_create_aquecimentos.rb
+db/migrate/20240727132003_create_fisicos.rb
+db/migrate/20240727143753_change_tecnico_in_aulas_to_text.rb
+db/migrate/20240731212218_create_turmas.rb
+db/migrate/20240731212713_add_faixa_etaria_and_modalidade_toturmas.rb
+db/migrate/20240731212904_create_semanals.rb
+db/migrate/20240731225404_add_semanal_id_to_turmas.rb
+db/migrate/20240802165007_add_professor_titular_to_turmas.rb
+db/migrate/20240802171314_create_enrollments.rb
+db/migrate/20240803212357_rename_aquecimentos_to_warm_ups.rb
+db/migrate/20240803213036_rename_columns_in_warm_ups.rb
+db/migrate/20240803213854_rename_aulas_to_classes.rb
+db/migrate/20240803215135_remane_columns_in_classes.rb
+db/migrate/20240803215754_rename_classes_to_sessions.rb
+db/migrate/20240805213429_rename_columns_on_fisicos.rb
+db/migrate/20240805213647_rename_fisicos_to_physicals.rb
+db/migrate/20240805215650_rename_aula_id_to_session_id_in_warm_ups.rb
+db/migrate/20240805215854_rename_aula_id_to_session_id_in_physicals.rb
+db/migrate/20240805222611_rename_classes_to_slots_in_clients.rb
+db/migrate/20240805223354_rename_columns_in_turmas.rb
+db/migrate/20240805223526_rename_turmas_to_slots.rb
+db/migrate/20240805225251_rename_turma_id_in_enrollments.rb
+db/migrate/20240805235716_add_year_to_calendar.rb
+db/migrate/20240806000944_drop_calendars.rb
+db/migrate/20240806001145_create_calendars.rb
+db/migrate/20240806002134_create_calendar_days.rb
+db/migrate/20240807222933_rename_slots_to_groups.rb
+db/migrate/20240810142405_create_cash_registers.rb
+db/migrate/20240810142539_create_sales.rb
+db/migrate/20240810143800_change_columns_in_products.rb
+db/migrate/20240814000138_create_plans.rb
+db/migrate/20240814000421_create_plan_assignments.rb
+db/migrate/20240814194643_create_events.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-08-27 20:12:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 6 pending migrations:
+
+db/migrate/20240810142405_create_cash_registers.rb
+db/migrate/20240810142539_create_sales.rb
+db/migrate/20240810143800_change_columns_in_products.rb
+db/migrate/20240814000138_create_plans.rb
+db/migrate/20240814000421_create_plan_assignments.rb
+db/migrate/20240814194643_create_events.rb
+
+
+):
+  
+activerecord (7.1.3.4) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.4) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.4) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.4) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.4) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.4) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.4) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.1) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.6) lib/rack/method_override.rb:28:in `call'
+rack (3.1.6) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.6) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.4) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.4) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCashRegisters (20240810142405)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "cash_registers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "opening_balance" decimal, "closing_balance" decimal, "date" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-08-27 20:12:38 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/helpers/slot_helper.rb:4:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2702)
+  Rendered layout layouts/application.html.erb (Duration: 910.1ms | Allocations: 37114)
+Completed 200 OK in 1289ms (Views: 909.3ms | ActiveRecord: 3.7ms | Allocations: 61648)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-08-27 20:12:55 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/helpers/slot_helper.rb:4:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 196.3ms | Allocations: 7051)
+Completed 200 OK in 200ms (Views: 198.7ms | ActiveRecord: 0.2ms | Allocations: 7431)
+
+
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/sessions" for 127.0.0.1 at 2024-08-27 20:13:42 -0300
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:3
+  Rendered sessions/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1081)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4371)
+Completed 200 OK in 103ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 9450)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2024-08-27 20:13:44 -0300
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (Duration: 101.9ms | Allocations: 3379)
+  Rendered sessions/new.html.erb within layouts/application (Duration: 105.4ms | Allocations: 3701)
+  Rendered layout layouts/application.html.erb (Duration: 121.0ms | Allocations: 6740)
+Completed 200 OK in 885ms (Views: 123.2ms | ActiveRecord: 4.7ms | Allocations: 220958)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2024-08-27 20:13:50 -0300
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:3
+  Rendered sessions/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 3779)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.4ms | Allocations: 4135)
+
+
+Started GET "/groups" for 127.0.0.1 at 2024-08-27 20:13:52 -0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:15
+  Rendered groups/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4322)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.2ms | Allocations: 4969)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2024-08-27 20:13:55 -0300
+Processing by GroupsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/groups/_form.html.erb:35
+  Rendered groups/_form.html.erb (Duration: 236.7ms | Allocations: 6637)
+  Rendered groups/new.html.erb within layouts/application (Duration: 247.8ms | Allocations: 6927)
+  Rendered layout layouts/application.html.erb (Duration: 262.6ms | Allocations: 9967)
+Completed 200 OK in 442ms (Views: 264.0ms | ActiveRecord: 1.5ms | Allocations: 86003)
+
+
+Started GET "/employees" for 127.0.0.1 at 2024-08-27 20:14:10 -0300
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:5
+  Rendered employees/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1006)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 4300)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.3ms | Allocations: 4857)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/employees" for 127.0.0.1 at 2024-08-27 20:30:04 -0300
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:5
+  Rendered employees/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 41055)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 44854)
+Completed 200 OK in 54ms (Views: 43.7ms | ActiveRecord: 3.7ms | Allocations: 48078)
+
+
+Started GET "/" for 127.0.0.1 at 2024-08-27 20:30:08 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/helpers/slot_helper.rb:4:in `map'
+  Rendered home/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 7440)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 10738)
+Completed 200 OK in 84ms (Views: 47.9ms | ActiveRecord: 1.2ms | Allocations: 18675)
+
+

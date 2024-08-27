@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_14_194643) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_14_000421) do
   create_table "calendar_days", force: :cascade do |t|
     t.date "date"
     t.integer "calendar_id", null: false
@@ -57,15 +57,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_14_194643) do
     t.datetime "updated_at", null: false
     t.index ["client_id"], name: "index_enrollments_on_client_id"
     t.index ["group_id"], name: "index_enrollments_on_group_id"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.integer "calendar_day_id", null: false
-    t.integer "group_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["calendar_day_id"], name: "index_events_on_calendar_day_id"
-    t.index ["group_id"], name: "index_events_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -161,8 +152,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_14_194643) do
   add_foreign_key "calendar_days", "calendars"
   add_foreign_key "enrollments", "clients"
   add_foreign_key "enrollments", "groups"
-  add_foreign_key "events", "calendar_days"
-  add_foreign_key "events", "groups"
   add_foreign_key "groups", "employees", column: "professor_titular_id"
   add_foreign_key "physicals", "sessions"
   add_foreign_key "plan_assignments", "clients"
